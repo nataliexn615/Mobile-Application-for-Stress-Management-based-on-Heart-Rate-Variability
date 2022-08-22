@@ -1,0 +1,984 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2109AE9925C5B1E2005B6A57 /* Emotion1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2109AE9825C5B1E1005B6A57 /* Emotion1.mlmodel */; };
+		210EFEE626037E360024B9C6 /* AVCaptureDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210EFEE526037E360024B9C6 /* AVCaptureDevice+Extensions.swift */; };
+		210EFEEB26037E4F0024B9C6 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210EFEEA26037E4F0024B9C6 /* ColorUtils.swift */; };
+		210EFEF026037E6D0024B9C6 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210EFEEF26037E6D0024B9C6 /* Filter.swift */; };
+		210EFEF526037E7F0024B9C6 /* PulseDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210EFEF426037E7F0024B9C6 /* PulseDetector.swift */; };
+		210EFEFA26037EA50024B9C6 /* HeartRateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210EFEF926037EA50024B9C6 /* HeartRateManager.swift */; };
+		212B77F825C08B4200DA3513 /* EmotionDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212B77F725C08B4200DA3513 /* EmotionDetectionViewController.swift */; };
+		212B77FD25C08B9200DA3513 /* EmotionFYP1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 212B77FC25C08B9200DA3513 /* EmotionFYP1.mlmodel */; };
+		2143F47E2604766100D51B41 /* EmotionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2143F47D2604766100D51B41 /* EmotionResult.swift */; };
+		2164F06525F0C3E700A9BE14 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2164F06425F0C3E700A9BE14 /* HealthKit.framework */; };
+		2187322D261355230057044E /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2187322C261355230057044E /* SettingTableViewCell.swift */; };
+		21873235261370F70057044E /* changeJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21873234261370F70057044E /* changeJob.swift */; };
+		2187323E2613B1630057044E /* logout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2187323D2613B1620057044E /* logout.swift */; };
+		2189350425B8997B002F679F /* SignUp2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189350325B8997B002F679F /* SignUp2ViewController.swift */; };
+		2189350625B899DB002F679F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189350525B899DB002F679F /* HomeViewController.swift */; };
+		2189350825B89A04002F679F /* PulseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189350725B89A04002F679F /* PulseViewController.swift */; };
+		2189350A25B89A28002F679F /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189350925B89A28002F679F /* CalendarViewController.swift */; };
+		2189350C25B89A45002F679F /* RelaxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189350B25B89A45002F679F /* RelaxViewController.swift */; };
+		2189351025B89B4B002F679F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189350F25B89B4B002F679F /* ViewController.swift */; };
+		2189351425B89D06002F679F /* SignUp3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189351325B89D06002F679F /* SignUp3ViewController.swift */; };
+		2189351625B8B00F002F679F /* Relax1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189351525B8B00F002F679F /* Relax1ViewController.swift */; };
+		2189351825B8B0FE002F679F /* RelaxResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189351725B8B0FE002F679F /* RelaxResultViewController.swift */; };
+		2189351A25B8B80F002F679F /* QuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189351925B8B80F002F679F /* QuestionData.swift */; };
+		2189351B25B8BF29002F679F /* Relax1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189351525B8B00F002F679F /* Relax1ViewController.swift */; };
+		2189351C25B8BF2E002F679F /* Relax1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189351525B8B00F002F679F /* Relax1ViewController.swift */; };
+		2189B6152600F03900BF4EE0 /* playYoutubeVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189B6142600F03900BF4EE0 /* playYoutubeVideo.swift */; };
+		218AF80125BC2191000A9800 /* displayVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218AF80025BC2191000A9800 /* displayVideo.swift */; };
+		218AF80325BC5A46000A9800 /* ice.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 218AF80225BC5A46000A9800 /* ice.mp4 */; };
+		2190044525BB482200DDAB72 /* ASMRmenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2190044425BB482200DDAB72 /* ASMRmenu.swift */; };
+		2190044B25BB585000DDAB72 /* videoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2190044A25BB585000DDAB72 /* videoData.swift */; };
+		2190044D25BB59D200DDAB72 /* TableDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2190044C25BB59D200DDAB72 /* TableDataTableViewCell.swift */; };
+		21928FEA2613398700E1CA7E /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21928FE92613398700E1CA7E /* SettingViewController.swift */; };
+		219E233125F09D6200F2BA86 /* QuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189351925B8B80F002F679F /* QuestionData.swift */; };
+		219E233225F09D6200F2BA86 /* QuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189351925B8B80F002F679F /* QuestionData.swift */; };
+		21A7920525BD9FD100527F99 /* CalendarHeatmap in Frameworks */ = {isa = PBXBuildFile; productRef = 21A7920425BD9FD100527F99 /* CalendarHeatmap */; };
+		21DFFEC025B8613C001F3485 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DFFEBF25B8613C001F3485 /* AppDelegate.swift */; };
+		21DFFEC225B8613C001F3485 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DFFEC125B8613C001F3485 /* SceneDelegate.swift */; };
+		21DFFEC725B8613C001F3485 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21DFFEC525B8613C001F3485 /* Main.storyboard */; };
+		21DFFEC925B86141001F3485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21DFFEC825B86141001F3485 /* Assets.xcassets */; };
+		21DFFECC25B86141001F3485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21DFFECA25B86141001F3485 /* LaunchScreen.storyboard */; };
+		21DFFED725B86141001F3485 /* ASMRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DFFED625B86141001F3485 /* ASMRTests.swift */; };
+		21DFFEE225B86141001F3485 /* ASMRUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DFFEE125B86141001F3485 /* ASMRUITests.swift */; };
+		21DFFEF025B8633A001F3485 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DFFEEF25B8633A001F3485 /* LoginViewController.swift */; };
+		21DFFEF225B86350001F3485 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DFFEF125B86350001F3485 /* SignUpViewController.swift */; };
+		21DFFEF425B86741001F3485 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21DFFEF325B86741001F3485 /* GoogleService-Info.plist */; };
+		43077C3B9F58C91DEAE23409 /* Pods_ASMR_ASMRUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 318BCB7EC3361DAF76DC8550 /* Pods_ASMR_ASMRUITests.framework */; };
+		CD7E6A94843A5042593A761E /* Pods_ASMRTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4DAA345D18224A8B08B265 /* Pods_ASMRTests.framework */; };
+		F4B35248A638EC9119F6515F /* Pods_ASMR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D1A119AB8CED40E70FE95C3 /* Pods_ASMR.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		21DFFED325B86141001F3485 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21DFFEB425B8613B001F3485 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21DFFEBB25B8613B001F3485;
+			remoteInfo = ASMR;
+		};
+		21DFFEDE25B86141001F3485 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21DFFEB425B8613B001F3485 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21DFFEBB25B8613B001F3485;
+			remoteInfo = ASMR;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03DBC841F4A514859BD2EB4B /* Pods-ASMR-ASMRUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASMR-ASMRUITests.release.xcconfig"; path = "Target Support Files/Pods-ASMR-ASMRUITests/Pods-ASMR-ASMRUITests.release.xcconfig"; sourceTree = "<group>"; };
+		0710585EA50463A0AABB5A21 /* Pods-ASMR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASMR.debug.xcconfig"; path = "Target Support Files/Pods-ASMR/Pods-ASMR.debug.xcconfig"; sourceTree = "<group>"; };
+		13C83925F60CA05616CB9821 /* Pods-ASMRTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASMRTests.release.xcconfig"; path = "Target Support Files/Pods-ASMRTests/Pods-ASMRTests.release.xcconfig"; sourceTree = "<group>"; };
+		2109AE9825C5B1E1005B6A57 /* Emotion1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Emotion1.mlmodel; sourceTree = "<group>"; };
+		210EFEE526037E360024B9C6 /* AVCaptureDevice+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureDevice+Extensions.swift"; sourceTree = "<group>"; };
+		210EFEEA26037E4F0024B9C6 /* ColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
+		210EFEEF26037E6D0024B9C6 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		210EFEF426037E7F0024B9C6 /* PulseDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseDetector.swift; sourceTree = "<group>"; };
+		210EFEF926037EA50024B9C6 /* HeartRateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateManager.swift; sourceTree = "<group>"; };
+		212B77F725C08B4200DA3513 /* EmotionDetectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionDetectionViewController.swift; sourceTree = "<group>"; };
+		212B77FC25C08B9200DA3513 /* EmotionFYP1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = EmotionFYP1.mlmodel; sourceTree = "<group>"; };
+		2143F47D2604766100D51B41 /* EmotionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionResult.swift; sourceTree = "<group>"; };
+		2164F06325F0C3E700A9BE14 /* ASMR.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ASMR.entitlements; sourceTree = "<group>"; };
+		2164F06425F0C3E700A9BE14 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		2187322C261355230057044E /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		21873234261370F70057044E /* changeJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = changeJob.swift; sourceTree = "<group>"; };
+		2187323D2613B1620057044E /* logout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logout.swift; sourceTree = "<group>"; };
+		2189350325B8997B002F679F /* SignUp2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp2ViewController.swift; sourceTree = "<group>"; };
+		2189350525B899DB002F679F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2189350725B89A04002F679F /* PulseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseViewController.swift; sourceTree = "<group>"; };
+		2189350925B89A28002F679F /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		2189350B25B89A45002F679F /* RelaxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxViewController.swift; sourceTree = "<group>"; };
+		2189350F25B89B4B002F679F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2189351325B89D06002F679F /* SignUp3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp3ViewController.swift; sourceTree = "<group>"; };
+		2189351525B8B00F002F679F /* Relax1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relax1ViewController.swift; sourceTree = "<group>"; };
+		2189351725B8B0FE002F679F /* RelaxResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxResultViewController.swift; sourceTree = "<group>"; };
+		2189351925B8B80F002F679F /* QuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionData.swift; sourceTree = "<group>"; };
+		2189B6142600F03900BF4EE0 /* playYoutubeVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playYoutubeVideo.swift; sourceTree = "<group>"; };
+		218AF80025BC2191000A9800 /* displayVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = displayVideo.swift; sourceTree = "<group>"; };
+		218AF80225BC5A46000A9800 /* ice.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ice.mp4; sourceTree = "<group>"; };
+		2190044425BB482200DDAB72 /* ASMRmenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASMRmenu.swift; sourceTree = "<group>"; };
+		2190044A25BB585000DDAB72 /* videoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = videoData.swift; sourceTree = "<group>"; };
+		2190044C25BB59D200DDAB72 /* TableDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDataTableViewCell.swift; sourceTree = "<group>"; };
+		21928FE92613398700E1CA7E /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		21DFFEBC25B8613B001F3485 /* ASMR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ASMR.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		21DFFEBF25B8613C001F3485 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		21DFFEC125B8613C001F3485 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		21DFFEC625B8613C001F3485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		21DFFEC825B86141001F3485 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		21DFFECB25B86141001F3485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		21DFFECD25B86141001F3485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21DFFED225B86141001F3485 /* ASMRTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ASMRTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		21DFFED625B86141001F3485 /* ASMRTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASMRTests.swift; sourceTree = "<group>"; };
+		21DFFED825B86141001F3485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21DFFEDD25B86141001F3485 /* ASMRUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ASMRUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		21DFFEE125B86141001F3485 /* ASMRUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASMRUITests.swift; sourceTree = "<group>"; };
+		21DFFEE325B86141001F3485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21DFFEEF25B8633A001F3485 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		21DFFEF125B86350001F3485 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		21DFFEF325B86741001F3485 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2329C710945B053B66488A28 /* Pods-ASMR-ASMRUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASMR-ASMRUITests.debug.xcconfig"; path = "Target Support Files/Pods-ASMR-ASMRUITests/Pods-ASMR-ASMRUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		318BCB7EC3361DAF76DC8550 /* Pods_ASMR_ASMRUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ASMR_ASMRUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E58D8FEAEBCFA8317507D41 /* Pods-ASMRTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASMRTests.debug.xcconfig"; path = "Target Support Files/Pods-ASMRTests/Pods-ASMRTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9D1A119AB8CED40E70FE95C3 /* Pods_ASMR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ASMR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E6105284323CCD63B5F0D1D /* Pods-ASMR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASMR.release.xcconfig"; path = "Target Support Files/Pods-ASMR/Pods-ASMR.release.xcconfig"; sourceTree = "<group>"; };
+		AD4DAA345D18224A8B08B265 /* Pods_ASMRTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ASMRTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		21DFFEB925B8613B001F3485 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2164F06525F0C3E700A9BE14 /* HealthKit.framework in Frameworks */,
+				F4B35248A638EC9119F6515F /* Pods_ASMR.framework in Frameworks */,
+				21A7920525BD9FD100527F99 /* CalendarHeatmap in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21DFFECF25B86141001F3485 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD7E6A94843A5042593A761E /* Pods_ASMRTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21DFFEDA25B86141001F3485 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43077C3B9F58C91DEAE23409 /* Pods_ASMR_ASMRUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2164F12325F21EDA00A9BE14 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				2189350925B89A28002F679F /* CalendarViewController.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		2165F1EF26046DEC00630F43 /* EmotionDetection */ = {
+			isa = PBXGroup;
+			children = (
+				2109AE9825C5B1E1005B6A57 /* Emotion1.mlmodel */,
+				212B77FC25C08B9200DA3513 /* EmotionFYP1.mlmodel */,
+				212B77F725C08B4200DA3513 /* EmotionDetectionViewController.swift */,
+				2143F47D2604766100D51B41 /* EmotionResult.swift */,
+			);
+			path = EmotionDetection;
+			sourceTree = "<group>";
+		};
+		21816B6025F33C500029A3B2 /* ASMR videos */ = {
+			isa = PBXGroup;
+			children = (
+				2190044425BB482200DDAB72 /* ASMRmenu.swift */,
+				218AF80025BC2191000A9800 /* displayVideo.swift */,
+				2190044A25BB585000DDAB72 /* videoData.swift */,
+				2189B6142600F03900BF4EE0 /* playYoutubeVideo.swift */,
+				2190044C25BB59D200DDAB72 /* TableDataTableViewCell.swift */,
+			);
+			path = "ASMR videos";
+			sourceTree = "<group>";
+		};
+		2186857825EFEA44007C1873 /* Pulse */ = {
+			isa = PBXGroup;
+			children = (
+				2189350725B89A04002F679F /* PulseViewController.swift */,
+				210EFEE526037E360024B9C6 /* AVCaptureDevice+Extensions.swift */,
+				210EFEEA26037E4F0024B9C6 /* ColorUtils.swift */,
+				210EFEEF26037E6D0024B9C6 /* Filter.swift */,
+				210EFEF426037E7F0024B9C6 /* PulseDetector.swift */,
+				210EFEF926037EA50024B9C6 /* HeartRateManager.swift */,
+			);
+			path = Pulse;
+			sourceTree = "<group>";
+		};
+		218AF80425BC5AC0000A9800 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				218AF80225BC5A46000A9800 /* ice.mp4 */,
+			);
+			path = Videos;
+			sourceTree = "<group>";
+		};
+		21928FEE2613399C00E1CA7E /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				21928FE92613398700E1CA7E /* SettingViewController.swift */,
+				2187322C261355230057044E /* SettingTableViewCell.swift */,
+				21873234261370F70057044E /* changeJob.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		219E232B25F09D1C00F2BA86 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				21DFFEEF25B8633A001F3485 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		219E232C25F09D2A00F2BA86 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				21DFFEF125B86350001F3485 /* SignUpViewController.swift */,
+				2189350325B8997B002F679F /* SignUp2ViewController.swift */,
+				2189351325B89D06002F679F /* SignUp3ViewController.swift */,
+				2187323D2613B1620057044E /* logout.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		219E233025F09D5300F2BA86 /* Questionnaire */ = {
+			isa = PBXGroup;
+			children = (
+				2189351925B8B80F002F679F /* QuestionData.swift */,
+				2189351525B8B00F002F679F /* Relax1ViewController.swift */,
+				2189350B25B89A45002F679F /* RelaxViewController.swift */,
+				2189351725B8B0FE002F679F /* RelaxResultViewController.swift */,
+			);
+			path = Questionnaire;
+			sourceTree = "<group>";
+		};
+		21DFFEB325B8613B001F3485 = {
+			isa = PBXGroup;
+			children = (
+				21DFFEBE25B8613B001F3485 /* ASMR */,
+				21DFFED525B86141001F3485 /* ASMRTests */,
+				21DFFEE025B86141001F3485 /* ASMRUITests */,
+				21DFFEBD25B8613B001F3485 /* Products */,
+				ADE7335345D4D27CCF8F45F6 /* Pods */,
+				45523EE3DD6BC33CAF1751D7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		21DFFEBD25B8613B001F3485 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				21DFFEBC25B8613B001F3485 /* ASMR.app */,
+				21DFFED225B86141001F3485 /* ASMRTests.xctest */,
+				21DFFEDD25B86141001F3485 /* ASMRUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		21DFFEBE25B8613B001F3485 /* ASMR */ = {
+			isa = PBXGroup;
+			children = (
+				2164F06325F0C3E700A9BE14 /* ASMR.entitlements */,
+				21816B6025F33C500029A3B2 /* ASMR videos */,
+				218AF80425BC5AC0000A9800 /* Videos */,
+				21DFFEC525B8613C001F3485 /* Main.storyboard */,
+				21928FEE2613399C00E1CA7E /* Setting */,
+				2165F1EF26046DEC00630F43 /* EmotionDetection */,
+				21DFFEF325B86741001F3485 /* GoogleService-Info.plist */,
+				21DFFEBF25B8613C001F3485 /* AppDelegate.swift */,
+				21DFFEC125B8613C001F3485 /* SceneDelegate.swift */,
+				2189350525B899DB002F679F /* HomeViewController.swift */,
+				2186857825EFEA44007C1873 /* Pulse */,
+				2164F12325F21EDA00A9BE14 /* Calendar */,
+				219E232B25F09D1C00F2BA86 /* Login */,
+				219E232C25F09D2A00F2BA86 /* Register */,
+				21DFFEC825B86141001F3485 /* Assets.xcassets */,
+				219E233025F09D5300F2BA86 /* Questionnaire */,
+				21DFFECA25B86141001F3485 /* LaunchScreen.storyboard */,
+				2189350F25B89B4B002F679F /* ViewController.swift */,
+				21DFFECD25B86141001F3485 /* Info.plist */,
+			);
+			path = ASMR;
+			sourceTree = "<group>";
+		};
+		21DFFED525B86141001F3485 /* ASMRTests */ = {
+			isa = PBXGroup;
+			children = (
+				21DFFED625B86141001F3485 /* ASMRTests.swift */,
+				21DFFED825B86141001F3485 /* Info.plist */,
+			);
+			path = ASMRTests;
+			sourceTree = "<group>";
+		};
+		21DFFEE025B86141001F3485 /* ASMRUITests */ = {
+			isa = PBXGroup;
+			children = (
+				21DFFEE125B86141001F3485 /* ASMRUITests.swift */,
+				21DFFEE325B86141001F3485 /* Info.plist */,
+			);
+			path = ASMRUITests;
+			sourceTree = "<group>";
+		};
+		45523EE3DD6BC33CAF1751D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2164F06425F0C3E700A9BE14 /* HealthKit.framework */,
+				9D1A119AB8CED40E70FE95C3 /* Pods_ASMR.framework */,
+				318BCB7EC3361DAF76DC8550 /* Pods_ASMR_ASMRUITests.framework */,
+				AD4DAA345D18224A8B08B265 /* Pods_ASMRTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ADE7335345D4D27CCF8F45F6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0710585EA50463A0AABB5A21 /* Pods-ASMR.debug.xcconfig */,
+				9E6105284323CCD63B5F0D1D /* Pods-ASMR.release.xcconfig */,
+				2329C710945B053B66488A28 /* Pods-ASMR-ASMRUITests.debug.xcconfig */,
+				03DBC841F4A514859BD2EB4B /* Pods-ASMR-ASMRUITests.release.xcconfig */,
+				7E58D8FEAEBCFA8317507D41 /* Pods-ASMRTests.debug.xcconfig */,
+				13C83925F60CA05616CB9821 /* Pods-ASMRTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		21DFFEBB25B8613B001F3485 /* ASMR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21DFFEE625B86141001F3485 /* Build configuration list for PBXNativeTarget "ASMR" */;
+			buildPhases = (
+				FE99329304CCE95051C73956 /* [CP] Check Pods Manifest.lock */,
+				21DFFEB825B8613B001F3485 /* Sources */,
+				21DFFEB925B8613B001F3485 /* Frameworks */,
+				21DFFEBA25B8613B001F3485 /* Resources */,
+				2FC93D48A72790C8C8CE47A3 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ASMR;
+			packageProductDependencies = (
+				21A7920425BD9FD100527F99 /* CalendarHeatmap */,
+			);
+			productName = ASMR;
+			productReference = 21DFFEBC25B8613B001F3485 /* ASMR.app */;
+			productType = "com.apple.product-type.application";
+		};
+		21DFFED125B86141001F3485 /* ASMRTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21DFFEE925B86141001F3485 /* Build configuration list for PBXNativeTarget "ASMRTests" */;
+			buildPhases = (
+				4D50D1775151BDEFB2489DDC /* [CP] Check Pods Manifest.lock */,
+				21DFFECE25B86141001F3485 /* Sources */,
+				21DFFECF25B86141001F3485 /* Frameworks */,
+				21DFFED025B86141001F3485 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				21DFFED425B86141001F3485 /* PBXTargetDependency */,
+			);
+			name = ASMRTests;
+			productName = ASMRTests;
+			productReference = 21DFFED225B86141001F3485 /* ASMRTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		21DFFEDC25B86141001F3485 /* ASMRUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21DFFEEC25B86141001F3485 /* Build configuration list for PBXNativeTarget "ASMRUITests" */;
+			buildPhases = (
+				D54F63D6D4044AA38941E7FC /* [CP] Check Pods Manifest.lock */,
+				21DFFED925B86141001F3485 /* Sources */,
+				21DFFEDA25B86141001F3485 /* Frameworks */,
+				21DFFEDB25B86141001F3485 /* Resources */,
+				B62F0F08F2584B4EEC494B8B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				21DFFEDF25B86141001F3485 /* PBXTargetDependency */,
+			);
+			name = ASMRUITests;
+			productName = ASMRUITests;
+			productReference = 21DFFEDD25B86141001F3485 /* ASMRUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		21DFFEB425B8613B001F3485 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1170;
+				LastUpgradeCheck = 1170;
+				ORGANIZATIONNAME = "Li Cheuk Yin";
+				TargetAttributes = {
+					21DFFEBB25B8613B001F3485 = {
+						CreatedOnToolsVersion = 11.7;
+					};
+					21DFFED125B86141001F3485 = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 21DFFEBB25B8613B001F3485;
+					};
+					21DFFEDC25B86141001F3485 = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 21DFFEBB25B8613B001F3485;
+					};
+				};
+			};
+			buildConfigurationList = 21DFFEB725B8613B001F3485 /* Build configuration list for PBXProject "ASMR" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 21DFFEB325B8613B001F3485;
+			packageReferences = (
+				21A7920325BD9FD100527F99 /* XCRemoteSwiftPackageReference "CalendarHeatmap" */,
+			);
+			productRefGroup = 21DFFEBD25B8613B001F3485 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				21DFFEBB25B8613B001F3485 /* ASMR */,
+				21DFFED125B86141001F3485 /* ASMRTests */,
+				21DFFEDC25B86141001F3485 /* ASMRUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		21DFFEBA25B8613B001F3485 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21DFFECC25B86141001F3485 /* LaunchScreen.storyboard in Resources */,
+				218AF80325BC5A46000A9800 /* ice.mp4 in Resources */,
+				21DFFEF425B86741001F3485 /* GoogleService-Info.plist in Resources */,
+				21DFFEC925B86141001F3485 /* Assets.xcassets in Resources */,
+				21DFFEC725B8613C001F3485 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21DFFED025B86141001F3485 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21DFFEDB25B86141001F3485 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2FC93D48A72790C8C8CE47A3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ASMR/Pods-ASMR-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ASMR/Pods-ASMR-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ASMR/Pods-ASMR-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D50D1775151BDEFB2489DDC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ASMRTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B62F0F08F2584B4EEC494B8B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ASMR-ASMRUITests/Pods-ASMR-ASMRUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ASMR-ASMRUITests/Pods-ASMR-ASMRUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ASMR-ASMRUITests/Pods-ASMR-ASMRUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D54F63D6D4044AA38941E7FC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ASMR-ASMRUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE99329304CCE95051C73956 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ASMR-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		21DFFEB825B8613B001F3485 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				212B77F825C08B4200DA3513 /* EmotionDetectionViewController.swift in Sources */,
+				2189350C25B89A45002F679F /* RelaxViewController.swift in Sources */,
+				2187323E2613B1630057044E /* logout.swift in Sources */,
+				2189350A25B89A28002F679F /* CalendarViewController.swift in Sources */,
+				2189351425B89D06002F679F /* SignUp3ViewController.swift in Sources */,
+				210EFEFA26037EA50024B9C6 /* HeartRateManager.swift in Sources */,
+				212B77FD25C08B9200DA3513 /* EmotionFYP1.mlmodel in Sources */,
+				21DFFEF025B8633A001F3485 /* LoginViewController.swift in Sources */,
+				2189351025B89B4B002F679F /* ViewController.swift in Sources */,
+				2190044525BB482200DDAB72 /* ASMRmenu.swift in Sources */,
+				210EFEF526037E7F0024B9C6 /* PulseDetector.swift in Sources */,
+				21873235261370F70057044E /* changeJob.swift in Sources */,
+				2189350425B8997B002F679F /* SignUp2ViewController.swift in Sources */,
+				210EFEE626037E360024B9C6 /* AVCaptureDevice+Extensions.swift in Sources */,
+				210EFEEB26037E4F0024B9C6 /* ColorUtils.swift in Sources */,
+				21DFFEC025B8613C001F3485 /* AppDelegate.swift in Sources */,
+				2189351625B8B00F002F679F /* Relax1ViewController.swift in Sources */,
+				21DFFEC225B8613C001F3485 /* SceneDelegate.swift in Sources */,
+				218AF80125BC2191000A9800 /* displayVideo.swift in Sources */,
+				21DFFEF225B86350001F3485 /* SignUpViewController.swift in Sources */,
+				2190044D25BB59D200DDAB72 /* TableDataTableViewCell.swift in Sources */,
+				2109AE9925C5B1E2005B6A57 /* Emotion1.mlmodel in Sources */,
+				2187322D261355230057044E /* SettingTableViewCell.swift in Sources */,
+				2189350825B89A04002F679F /* PulseViewController.swift in Sources */,
+				2189351A25B8B80F002F679F /* QuestionData.swift in Sources */,
+				2190044B25BB585000DDAB72 /* videoData.swift in Sources */,
+				2189351825B8B0FE002F679F /* RelaxResultViewController.swift in Sources */,
+				21928FEA2613398700E1CA7E /* SettingViewController.swift in Sources */,
+				210EFEF026037E6D0024B9C6 /* Filter.swift in Sources */,
+				2189B6152600F03900BF4EE0 /* playYoutubeVideo.swift in Sources */,
+				2189350625B899DB002F679F /* HomeViewController.swift in Sources */,
+				2143F47E2604766100D51B41 /* EmotionResult.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21DFFECE25B86141001F3485 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				219E233225F09D6200F2BA86 /* QuestionData.swift in Sources */,
+				21DFFED725B86141001F3485 /* ASMRTests.swift in Sources */,
+				2189351B25B8BF29002F679F /* Relax1ViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21DFFED925B86141001F3485 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				219E233125F09D6200F2BA86 /* QuestionData.swift in Sources */,
+				21DFFEE225B86141001F3485 /* ASMRUITests.swift in Sources */,
+				2189351C25B8BF2E002F679F /* Relax1ViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		21DFFED425B86141001F3485 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 21DFFEBB25B8613B001F3485 /* ASMR */;
+			targetProxy = 21DFFED325B86141001F3485 /* PBXContainerItemProxy */;
+		};
+		21DFFEDF25B86141001F3485 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 21DFFEBB25B8613B001F3485 /* ASMR */;
+			targetProxy = 21DFFEDE25B86141001F3485 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		21DFFEC525B8613C001F3485 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21DFFEC625B8613C001F3485 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		21DFFECA25B86141001F3485 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21DFFECB25B86141001F3485 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		21DFFEE425B86141001F3485 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		21DFFEE525B86141001F3485 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		21DFFEE725B86141001F3485 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0710585EA50463A0AABB5A21 /* Pods-ASMR.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ASMR/ASMR.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HZ9KMVS5M5;
+				INFOPLIST_FILE = ASMR/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cyli79.ASMR;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		21DFFEE825B86141001F3485 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E6105284323CCD63B5F0D1D /* Pods-ASMR.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ASMR/ASMR.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HZ9KMVS5M5;
+				INFOPLIST_FILE = ASMR/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cyli79.ASMR;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		21DFFEEA25B86141001F3485 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E58D8FEAEBCFA8317507D41 /* Pods-ASMRTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ASMRTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cyli79.ASMRTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ASMR.app/ASMR";
+			};
+			name = Debug;
+		};
+		21DFFEEB25B86141001F3485 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13C83925F60CA05616CB9821 /* Pods-ASMRTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ASMRTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cyli79.ASMRTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ASMR.app/ASMR";
+			};
+			name = Release;
+		};
+		21DFFEED25B86141001F3485 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2329C710945B053B66488A28 /* Pods-ASMR-ASMRUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ASMRUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cyli79.ASMRUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ASMR;
+			};
+			name = Debug;
+		};
+		21DFFEEE25B86141001F3485 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03DBC841F4A514859BD2EB4B /* Pods-ASMR-ASMRUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ASMRUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cyli79.ASMRUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ASMR;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		21DFFEB725B8613B001F3485 /* Build configuration list for PBXProject "ASMR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21DFFEE425B86141001F3485 /* Debug */,
+				21DFFEE525B86141001F3485 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21DFFEE625B86141001F3485 /* Build configuration list for PBXNativeTarget "ASMR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21DFFEE725B86141001F3485 /* Debug */,
+				21DFFEE825B86141001F3485 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21DFFEE925B86141001F3485 /* Build configuration list for PBXNativeTarget "ASMRTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21DFFEEA25B86141001F3485 /* Debug */,
+				21DFFEEB25B86141001F3485 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21DFFEEC25B86141001F3485 /* Build configuration list for PBXNativeTarget "ASMRUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21DFFEED25B86141001F3485 /* Debug */,
+				21DFFEEE25B86141001F3485 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		21A7920325BD9FD100527F99 /* XCRemoteSwiftPackageReference "CalendarHeatmap" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Zacharysp/CalendarHeatmap.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		21A7920425BD9FD100527F99 /* CalendarHeatmap */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 21A7920325BD9FD100527F99 /* XCRemoteSwiftPackageReference "CalendarHeatmap" */;
+			productName = CalendarHeatmap;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 21DFFEB425B8613B001F3485 /* Project object */;
+}
