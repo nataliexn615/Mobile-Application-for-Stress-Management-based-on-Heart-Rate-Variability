@@ -1,14 +1,9 @@
 //
 //  PulseDetector.swift
-//  Pulse
+//  ASMR
 //
-//  Created by Athanasios Papazoglou on 18/7/20.
-//  Copyright © 2020 Athanasios Papazoglou. All rights reserved.
-//
-
-//  Original credits go to Gurpreet Singh.
-//  He created Filter.h & Filter.m on 31/10/2013.
-//  Copyright (c) 2015 Pubnub. All rights reserved.
+//  Created by Li Cheuk Yin on 20/1/2021.
+//  Copyright © 2021 Li Cheuk Yin. All rights reserved.
 //
 
 import Foundation
@@ -23,7 +18,6 @@ private let invalidEntry: Double = -100
 
 
 var recordedArray: Array<Int> = []
-//self.recordedDataArray.append(recordedData(beat: String(StartDate), time:String(timeRecord)))
 class PulseDetector: NSObject {
     private var upVals = [Double](repeating: 0.0, count: averageSize)
     private var downVals = [Double](repeating: 0.0, count: averageSize)
@@ -39,13 +33,13 @@ class PulseDetector: NSObject {
     private var wasDown = false
 
     private var periodStart: Double = 0.0
- //   var ms = Int((interval % 1) * 1000)
+ 
     override init() {
         super.init()
-        // set everything to invalid
+      
         reset()
     }
-  //  var i = 0
+ 
     func addNewValue(newVal: Double, atTime time: Double) -> Float {
         if newVal > 0 {
             upVals[upValIndex] = newVal
@@ -57,11 +51,7 @@ class PulseDetector: NSObject {
                 formatter.dateFormat = "SS"
                 let getMS = Int(formatter.string(from: date))
                 recordedArray.append(getMS!)
-                
-               // print("BeatingUp")
-               // print(formatter.string(from: date))
-               // print(recordedDataArray[i])
-              //  i += 1
+
             }
         }
         
@@ -70,16 +60,11 @@ class PulseDetector: NSObject {
             downValIndex += 1
             if downValIndex >= averageSize {
                 downValIndex = 0
-             //   let date = Date()
-              //      let formatter = DateFormatter()
-               //     formatter.dateFormat = "HH:mm:ss.SSS"
 
-                print("BeatingDown")
-               // print(formatter.string(from: date))
             }
         }
         
-        // work out the average value above zero
+ 
         var count: Double = 0
         var total: Double = 0
         for i in 0..<averageSize {
@@ -91,7 +76,7 @@ class PulseDetector: NSObject {
         }
         
         let averageUp: Double = total/count
-        // and the average value below zero
+        
         count = 0
         total = 0
         for i in 0..<averageSize {
@@ -106,10 +91,10 @@ class PulseDetector: NSObject {
         if newVal < -0.5 * averageDown {
             wasDown = true
         }
-        // is the new value an up value and were we previously in the down state?
+      
         if newVal >= 0.5 * averageUp && wasDown {
             wasDown = false
-            // work out the difference between now and the last time this happenned
+           
             if time - periodStart < maxPeriod && time - periodStart > minPeriod {
                 periods[periodIndex] = time - periodStart
                 periodTimes[periodIndex] = time
@@ -118,10 +103,10 @@ class PulseDetector: NSObject {
                     periodIndex = 0
                 }
             }
-            // track when the transition happened
+           
             periodStart = time
         }
-        // return up or down
+       
         if newVal < -0.5 * averageDown {
             return -1
         } else if newVal > 0.5 * averageUp {
@@ -135,13 +120,13 @@ class PulseDetector: NSObject {
         var total: Double = 0
         var count: Double = 0
         for i in 0..<maxPeriodsToStore {
-            // only use upto 10 seconds worth of data
+    
             if periods[i] != invalidEntry && time - periodTimes[i] < 10 {
                 count += 1
                 total += periods[i]
             }
         }
-        // do we have enough values?
+
         if count > 2 {
             return Float(total / count)
         }

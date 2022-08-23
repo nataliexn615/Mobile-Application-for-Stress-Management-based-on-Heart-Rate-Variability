@@ -1,8 +1,8 @@
 //
-//  SignUpViewController.swift
+//  HomeViewController.swift
 //  ASMR
 //
-//  Created by Ying Nam lee on 20/1/2021.
+//  Created by Li Cheuk Yin on 20/1/2021.
 //  Copyright © 2021 Li Cheuk Yin. All rights reserved.
 //
 
@@ -45,6 +45,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var askPulse: UITextView!
     static var keyD: String = ""
     static var keyK: String = ""
+    static var keyA: String = ""
     static var mykey:Double = 0.0
     static var keyE: String = ""
     static var asmrkey: String = ""
@@ -84,42 +85,7 @@ class HomeViewController: UIViewController {
 
         }
         )
-//        let center = UNUserNotificationCenter.current()
-//        print(center)
-//        center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
-//        }
-//
-//        // Step 2: Create the notification content
-//        let content = UNMutableNotificationContent()
-//        content.title = "Time to relax"
-//        content.body = "Continue your ASMR Playlist"
-//
-//        // Step 3: Create the notification trigger
-//        // let date = Date().addingTimeInterval(10)
-//
-//        // var dateComponents = DateComponents()
-//        //  dateComponents.calendar = Calendar.current
-//        var dateComponents = DateComponents()
-//        dateComponents.hour =  HomeViewController.getStartTimeNew/100
-//        dateComponents.minute =  HomeViewController.getStartTimeNew%100
-//        print(HomeViewController.getStartTimeNew)
-//  //      dateComponents.hour = getStartTimeNew/100
-////        dateComponents.minute = getStartTimeNew%100
-//        print(dateComponents)
-//        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
-//
-//        // Step 4: Create the request
-//
-//        let uuidString = UUID().uuidString
-//
-//        let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: trigger)
-//
-//        // Step 5: Register the request
-//        center.add(request) { (error) in
-//            if error != nil{
-//                print("error")
-//            }
-//        }
+
     
         
         continuePlay.isHidden = true
@@ -135,30 +101,28 @@ class HomeViewController: UIViewController {
         continuePlay.addGestureRecognizer(tapGestureRecognizer)
         
         pulsestatustext.layer.cornerRadius = 15
-        abnormalString = "It seems that your stress level is normal, but you can still try out our tailor-prepared 🎧ASMR playlist🎧 for an audio and visual stimuli 🤤"
-        normalString = "It seems that you are a bit stressful, try to experience our tailor-prepared 🎧ASMR playlist🎧 for an audio and visual stimuli 🤤"
+        abnormalString = "It seems that you are a bit stressful, try to experience our tailor-prepared 🎧ASMR playlist🎧 for an audio and visual stimuli 🤤"
+        normalString = "It seems that your stress level is normal, but you can still try out our tailor-prepared 🎧ASMR playlist🎧 for an audio and visual stimuli 🤤"
         
         
         mydatabaseData()
         super.viewDidLoad()
         let tappedImage = tapGestureRecognizer.view as! UIImageView
-        // askPulse.layer.cornerRadius = 25
-        // askPulse.layer.borderColor = UIColor.black.cgColor
         myHRVData()
         Database.database().reference().child("PersonalInfo").child(uid!).observe(.value, with: { [self] snapshot in
             for child in snapshot.children{
                 let valueD = child as! DataSnapshot
                 if valueD.key == "age"{
                     HomeViewController.getAge = valueD.value as! Int
-                   // print(HomeViewController.getAge)
+           
                 }
                 if valueD.key == "gender"{
                     HomeViewController.getGender = valueD.value as! String
-                        // print(HomeViewController.getGender)
+             
                 }
                 if valueD.key == "name"{
                     HomeViewController.getName = valueD.value as! String
-                   // print(HomeViewController.getName)
+                  
                     showName.text = "Welcome back, " + HomeViewController.getName
                 }
             }
@@ -167,79 +131,7 @@ class HomeViewController: UIViewController {
     }
     @objc func updatenewCounter() {
  
-//            var videos: [Video] = Video.fetchEatingVideos()
-//            switch bestASMR.text{
-//                case "Whispering":
-//                     videos = Video.fetchWhisperingVideos()
-//                case "Tapping":
-//                    videos = Video.fetchTappingVideos()
-//                case  "Physical touch":
-//                     videos = Video.fetchPhysicalTouchVideos()
-//                case "Physical Attention":
-//                     videos = Video.fetchPhysicalAttentionVideos()
-//                case "Page Turning" :
-//                     videos = Video.fetchpageTurningVideos()
-//                case "Light":
-//                     videos = Video.fetchLightVideos()
-//                case "Roleplay":
-//                     videos = Video.fetchRolePlayVideos()
-//                case "Eating":
-//                     videos = Video.fetchEatingVideos()
-//                case "Concentration":
-//                     videos = Video.fetchConcentrationVideos()
-//                case "Massage":
-//                     videos = Video.fetchMassageVideos()
-//                case "Crinkling":
-//                    videos = Video.fetchRinklingVideos()
-//
-//                default:
-//                    print("default")
-//
-//            }
-//
-//
-//            let selectedVideo = videos[1]
-//
-//            displayVideo.choseVideo = selectedVideo.videoID
-//            continuePlay.image = UIImage(named: selectedVideo.thumbNail)
-            
-          
-            // Step 1: Ask for permission
-//            let center = UNUserNotificationCenter.current()
-//            print(center)
-//            center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
-//            }
-//
-//            // Step 2: Create the notification content
-//            let content = UNMutableNotificationContent()
-//            content.title = "Time to relax"
-//            content.body = "Continue your ASMR Playlist"
-//
-//            // Step 3: Create the notification trigger
-//            // let date = Date().addingTimeInterval(10)
-//
-//            // var dateComponents = DateComponents()
-//            //  dateComponents.calendar = Calendar.current
-//            var dateComponents = DateComponents()
-//            sleep(5)
-//            dateComponents.hour = getStartTimeNew/100
-//            dateComponents.minute = getStartTimeNew%100
-//            print(dateComponents)
-//            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
-//
-//            // Step 4: Create the request
-//
-//            let uuidString = UUID().uuidString
-//
-//            let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: trigger)
-//
-//            // Step 5: Register the request
-//            center.add(request) { (error) in
-//                if error != nil{
-//                    print("error")
-//                }
-//            }
-//
+9
     }
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
         
@@ -253,24 +145,28 @@ class HomeViewController: UIViewController {
             for child in snapshot.children{
                 let valueD = child as! DataSnapshot
                 HomeViewController.keyK = valueD.key
+            
                 Database.database().reference().child("HRVData").child(uid!).child(HomeViewController.keyK).observe(.value, with: { [self] snapshot in
-                    //    let subscriptionSnap = snapshot.childSnapshot(forPath: "uid!")
                     let dateFormator = DateFormatter()
                     dateFormator.dateFormat = "dd/MM/yyyy"
                     let startDate = Calendar.current.date(byAdding: .month, value: 0, to: Date())
                     let StartDate = dateFormator.string(from: startDate!)
                     for child in snapshot.children{
                         let getData = child as! DataSnapshot
-                        
-                        if getData.key == "HRVData"{
-                            let x: Double =  getData.value as! Double
+                        HomeViewController.keyA = getData.key
+                       
+                        Database.database().reference().child("HRVData").child(uid!).child(HomeViewController.keyK).child(HomeViewController.keyA).observe(.value, with: { [self] snapshot in
+                            for child in snapshot.children{
+                                let getData2 = child as! DataSnapshot
+                                if getData2.key == "HRVData"{
+                            let x: Double =  getData2.value as! Double
+       
                             HomeViewController.mykey  = Double(round(1000*x)/1000)
+                            print(HomeViewController.mykey)
                             let display:String = String(HomeViewController.mykey)
-                        //    print(HomeViewController.mykey)
+                            sleep(2)
                             moodStatus.text = display
                             willBe.isHidden = true
-//                            CalendarViewController.hrvArray.append(newStruct.init(date: String(StartDate), time:String(HomeViewController.keyK), HRV:String(HomeViewController.mykey)))
-                           // print(CalendarViewController.hrvArray)
                             if HomeViewController.getGender == "Male" {
                                 switch HomeViewController.getAge {
                                     case HomeViewController.getAge where (HomeViewController.getAge < 35):
@@ -343,28 +239,18 @@ class HomeViewController: UIViewController {
                                     default:
                                         HRVStatus.text = "Abnormal"
                                 }}
-                        }
-                    }
-                }
-                )
-            }
-        }
-        )
+                                }}})}})}})}
 
-        
-    }
+            
     func mydatabaseData(){
         let queue = DispatchQueue(label: "ASMRQueue")
-        
-       // print("Start task1")
-        
         queue.sync{
             Database.database().reference().child("EmotionData").child(uid!).observe(.value, with: { [self] snapshot in
                 for child in snapshot.children{
                     let valueD = child as! DataSnapshot
                     HomeViewController.keyD = valueD.key
                     Database.database().reference().child("EmotionData").child(uid!).child(HomeViewController.keyD).observe(.value, with: { [self] snapshot in
-                        //    let subscriptionSnap = snapshot.childSnapshot(forPath: "uid!")
+                      
                         for child in snapshot.children{
                             let getData = child as! DataSnapshot
                             let mykey  = getData.key
@@ -374,9 +260,9 @@ class HomeViewController: UIViewController {
                                 HomeViewController.emotionkey = getData.value as! String
                                 if HomeViewController.emotionkey == "happy"{
                                     mytry = HomeViewController.asmrkey
-                                //    print(mytry)
+                            
                                     HomeViewController.newemotionArray.append(mytry)
-                                    // myPrint()
+                           
                                 }
                             }
                         }
@@ -398,13 +284,13 @@ class HomeViewController: UIViewController {
         stopLoop = true
         timer.invalidate()
         
-     //print(HomeViewController.newemotionArray.count)
+  
         for item in HomeViewController.newemotionArray {
             counts[item] = (counts[item] ?? 0) + 1
         }
         
         for (key, value) in counts {
-            // print("\(key) occurs \(value) time(s)")
+          
         }
         HomeViewController.newemotionArray.forEach { countMax[$0] = (countMax[$0] ?? 0) + 1 }
         if let (value, count) = countMax.max(by: {$0.1 < $1.1}) {
@@ -416,36 +302,35 @@ class HomeViewController: UIViewController {
             continuePlay.clipsToBounds = true
             if bestASMR.text == "None" {
                 showIfNoASMR.isHidden = false
-               // continuePlay.isHidden = true
+              
                 
             }
             continuePlay.isHidden = false
             continuePlay.layer.cornerRadius = 15
-           // print("\(value) occurs \(count) times")
-//            Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(updatenewCounter), userInfo: nil, repeats: false)
+         
             var videos: [Video] = Video.fetchEatingVideos()
             switch bestASMR.text{
-                case "whispering":
+                case "Whispering":
                      videos = Video.fetchWhisperingVideos()
-                case "tapping":
+                case "Tapping":
                     videos = Video.fetchTappingVideos()
-                case  "physical touch":
+                case  "Physical Touch":
                      videos = Video.fetchPhysicalTouchVideos()
-                case "physical Attention":
+                case "Physical Attention":
                      videos = Video.fetchPhysicalAttentionVideos()
-                case "page Turning" :
+                case "Page Turning" :
                      videos = Video.fetchpageTurningVideos()
-                case "light":
+                case "Light":
                      videos = Video.fetchLightVideos()
-                case "roleplay":
+                case "Roleplay":
                      videos = Video.fetchRolePlayVideos()
-                case "eating":
+                case "Eating":
                      videos = Video.fetchEatingVideos()
-                case "concentration":
+                case "Concentration":
                      videos = Video.fetchConcentrationVideos()
-                case "massage":
+                case "Massage":
                      videos = Video.fetchMassageVideos()
-                case "crinkling":
+                case "Crinkling":
                     videos = Video.fetchRinklingVideos()
                     
                 default:

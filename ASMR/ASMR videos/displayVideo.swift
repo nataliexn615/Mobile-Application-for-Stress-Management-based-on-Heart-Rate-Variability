@@ -1,8 +1,8 @@
 //
-//  VideosTableViewController.swift
+//  displayVideo.swift
 //  ASMR
 //
-//  Created by Ying Nam lee on 23/1/2021.
+//  Created by Li Cheuk Yin on 20/1/2021.
 //  Copyright © 2021 Li Cheuk Yin. All rights reserved.
 //
 
@@ -69,9 +69,6 @@ class displayVideo: UITableViewController{
       
         let selectedVideo = videos[indexPath.row]
         
-//        guard let videoPathURL = URL(string: selectedVideo.videoID) else {
-//            return
-//      }
         displayVideo.choseVideo = selectedVideo.videoID
         let vc: UIViewController = storyboard!.instantiateViewController(withIdentifier: "playYoutubeVideo")
         vc.modalPresentationStyle = .fullScreen

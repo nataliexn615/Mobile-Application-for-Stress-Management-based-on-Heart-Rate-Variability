@@ -2,7 +2,7 @@
 //  SignUpViewController.swift
 //  ASMR
 //
-//  Created by Ying Nam lee on 20/1/2021.
+//  Created by Li Cheuk Yin on 20/1/2021.
 //  Copyright © 2021 Li Cheuk Yin. All rights reserved.
 //
 
@@ -33,7 +33,7 @@ class SignUpViewController: UIViewController {
     }
     @IBAction func signUpTapped(_ sender: Any) {
         if email.text?.isEmpty == true {
-            //print("No text in Email field.")
+       
             errorMsg.text = "You have not enter your email"
             
             
@@ -51,7 +51,7 @@ class SignUpViewController: UIViewController {
         
         if password.text == reEnterPassword.text
         {
-            //print("Passwords are equal")
+           
         } else {
             errorMsg.text = "Passwords are not matched"
             return

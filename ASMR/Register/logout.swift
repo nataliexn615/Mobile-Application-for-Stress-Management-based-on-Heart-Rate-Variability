@@ -2,7 +2,7 @@
 //  logout.swift
 //  ASMR
 //
-//  Created by Ying Nam lee on 31/3/2021.
+//  Created by Li Cheuk Yin on 20/1/2021.
 //  Copyright © 2021 Li Cheuk Yin. All rights reserved.
 //
 
@@ -25,15 +25,15 @@ class logout: UIViewController {
                 self.present(vc, animated: true, completion: nil)
     }
     @IBAction func logoutBtn(_ sender: Any) {
-        let firebaseAuth = Auth.auth()
-    do {
-      try firebaseAuth.signOut()
-        let vc: UIViewController = storyboard!.instantiateViewController(withIdentifier: "login")
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
-    } catch let signOutError as NSError {
-      print ("Error signing out: %@", signOutError)
-    }
+        if Auth.auth().currentUser != nil {
+                do {
+                    try Auth.auth().signOut()
+                    exit(0)
+                    
+                } catch let error as NSError {
+                    print(error.localizedDescription)
+                }
+            }
     }
     
     

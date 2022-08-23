@@ -1,9 +1,9 @@
 //
 //  PulseViewController.swift
-//  Pulse
+//  ASMR
 //
-//  Created by Athanasios Papazoglou on 18/7/20.
-//  Copyright © 2020 Athanasios Papazoglou. All rights reserved.
+//  Created by Li Cheuk Yin on 20/1/2021.
+//  Copyright © 2021 Li Cheuk Yin. All rights reserved.
 //
 
 import UIKit
@@ -12,13 +12,15 @@ import Foundation
 import FirebaseAuth
 import FirebaseDatabase
 class PulseViewController: UIViewController {
+    var xv = [Double](repeating: 0.0, count: 10 + 1)
+    var yv = [Double](repeating: 0.0, count: 10 + 1)
 
 
     @IBOutlet weak var showlabel: UILabel!
     @IBOutlet weak var showStart: UIButton!
     @IBOutlet weak var showAskLabel: UILabel!
     @IBOutlet weak var HRVStatus: UITextView!
-    //  var structNew = CalendarViewController.hrvData(date:  sxc, time: <#String#>, HRV: <#String#>)
+
     var newStruct = CalendarViewController.hrvData.self
     @IBOutlet weak var showHRV: UILabel!
     @IBOutlet weak var pulseLabel: UILabel!
@@ -27,30 +29,26 @@ class PulseViewController: UIViewController {
     @IBOutlet weak var previewLayer: UIView!
     private var validFrameCounter = 0
     private var heartRateManager: HeartRateManager!
-    private var hueFilter = Filter()
+
     private var pulseDetector = PulseDetector()
     private var inputs: [CGFloat] = []
     private var measurementStartedFlag = false
     private var timer = Timer()
     private var newTimerr = Timer()
-
-
+    private var countTimer = Timer()
 
     @IBOutlet weak var counter: UILabel!
-  
-    
-   
     init() {
         super.init(nibName: "PulseViewController", bundle: nil)
     }
     required init?(coder aDecoder: NSCoder) {
        super.init(coder: aDecoder)
     }
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
+
     var counting = 30
     override func viewDidLoad() {
+       
+
         counter.textAlignment = .center
         showHRV.textAlignment = .center
         counter.text = "30"
@@ -59,49 +57,50 @@ class PulseViewController: UIViewController {
         super.viewDidLoad()
         showAskLabel.textAlignment = .center
         showAskLabel.text = "Press 👆🏻Start👆🏻 when you are ready"
-        //initVideoCapture()
+       
         counter.text = String(30)
         thresholdLabel.text = "Cover the back camera until the image turns red 🟥"
         
     }
  
     @IBAction func buttonPressed(_ sender: Any) {
+       
         showStart.isHidden = true
         let specs = VideoSpec(fps: 30, size: CGSize(width: 300, height: 300))
         heartRateManager = HeartRateManager(cameraType: .back, preferredSpec: specs, previewContainer: previewLayer.layer)
+        
         heartRateManager.imageBufferHandler = { [unowned self] (imageBuffer) in
             self.handle(buffer: imageBuffer)}
-      //  sleep(1)
-        
         heartRateManager.startCapture()
         showAskLabel.text = "seconds till your measurement ends."
-      //  showlabel.isHidden = true
-      //  showAskLabel.isHidden = true
         Timer.scheduledTimer(timeInterval: 31, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: false)
-    //    sleep(3)
-        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateNewwCounter), userInfo: nil, repeats: true)
+   
+        
+        countTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateNewwCounter), userInfo: nil, repeats: true)
 
     }
     @objc func updateNewwCounter() {
         if counting == 30 {
-                  // sleep(1)
+                  
                }
                if counting > 0 {
                 counter.text = String(counting)
                    counting -= 1
                } else if counting == 0{
-                //counter.text == "0"{
+             
                 counter.text = String(counting)
                 toggleTorch(status: false)
-                
+                self.pulseLabel.alpha = 0
+                self.pulseLabel.isHidden = true
+             
                }
     }
     @objc func updateCounter() {
-       // sleep(1)
+     
             calculatedNewarray.removeAll()
             calculatedarray.removeAll()
-            heartRateManager.stopCapture()
-      //      toggleTorch(status: false)
+        heartRateManager.stopCapture()
+    
            
           
           var j = 0
@@ -141,11 +140,11 @@ class PulseViewController: UIViewController {
             print("RMSSD", RMSSD)
             showHRV.text = String( Double(round(1000*RMSSD)/1000))
             let date = Date()
-                let formatter = DateFormatter()
-                formatter.dateFormat = "HH:mm:ss"
+            let formatter = DateFormatter()
+            formatter.dateFormat = "HH:mm:ss"
             let startDate = Calendar.current.date(byAdding: .month, value: 0, to: Date())
             let dateFormator = DateFormatter()
-            dateFormator.dateFormat = "dd/MM/yyyy"
+            dateFormator.dateFormat = "dd-MM-yyyy"
             
          let timeFormator = DateFormatter()
          timeFormator.dateFormat = "HH:mm"
@@ -157,12 +156,8 @@ class PulseViewController: UIViewController {
                 "HRVData": RMSSD
             ]
             
-            ref.child("HRVData").child(uid!).child(timeRecord).updateChildValues(obj)
-       
-//            CalendarViewController.hrvArray.append(newStruct.init(date: String(StartDate), time:String(timeRecord), HRV:String(RMSSD)))
+        ref.child("HRVData").child(uid!).child(String(StartDate)).child(timeRecord).child("HRVData").setValue(RMSSD)
 
-
-            
             if HomeViewController.getGender == "Male" {
                 switch HomeViewController.getAge {
                     case HomeViewController.getAge where (HomeViewController.getAge < 35):
@@ -236,7 +231,7 @@ class PulseViewController: UIViewController {
                         HRVStatus.text = "Abnormal"
                 
         }
-//                showHRV.text = String( Double(round(1000*RMSSD)/1000))
+
         }
         
         
@@ -249,14 +244,23 @@ class PulseViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        calculatedNewarray.removeAll()
+        calculatedarray.removeAll()
+        HRVStatus.text = ""
+        showHRV.text = " "
+        counting = 30
+        showStart.isHidden = false
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-       // deinitCaptureSession()
+        if self.countTimer != nil {
+            self.countTimer.invalidate()
+             }
+        previewLayer.layer.masksToBounds = false
     }
     
-    // MARK: - Setup Views
+   
     private func setupPreviewView() {
       
         previewLayer.layer.masksToBounds = true
@@ -287,7 +291,6 @@ class PulseViewController: UIViewController {
         device.toggleTorch(on: status)
     }
     
-    // MARK: - Measurement
     private func startMeasurement() {
         DispatchQueue.main.async {
             self.toggleTorch(status: true)
@@ -305,8 +308,12 @@ class PulseViewController: UIViewController {
                     UIView.animate(withDuration: 0.2, animations: {
                         self.pulseLabel.alpha = 1.0
                     }) { (_) in
+                        if(self.counter.text == "0"){
+                            self.pulseLabel.isHidden = true
+                        } else{
                         self.pulseLabel.isHidden = false
                         self.pulseLabel.text = "\(lroundf(pulse)) BPM"
+                        }
                     }
                 }
             })
@@ -314,7 +321,7 @@ class PulseViewController: UIViewController {
     }
 }
 
-//MARK: - Handle Image Buffer
+
 extension PulseViewController {
     fileprivate func handle(buffer: CMSampleBuffer) {
         var redmean:CGFloat = 0.0;
@@ -354,7 +361,6 @@ extension PulseViewController {
         }
         
         let hsv = rgb2hsv((red: redmean, green: greenmean, blue: bluemean, alpha: 1.0))
-        // Do a sanity check to see if a finger is placed over the camera
         if (hsv.1 > 0.5 && hsv.2 > 0.5) {
             DispatchQueue.main.async {
                 self.thresholdLabel.text = "Hold your index finger ☝️ still."
@@ -366,8 +372,7 @@ extension PulseViewController {
             }
             validFrameCounter += 1
             inputs.append(hsv.0)
-            // Filter the hue value - the filter is a simple BAND PASS FILTER that removes any DC component and any high frequency noise
-            let filtered = hueFilter.processValue(value: Double(hsv.0))
+            let filtered = processValue(value: Double(hsv.0))
             if validFrameCounter > 60 {
                 self.pulseDetector.addNewValue(newVal: filtered, atTime: CACurrentMediaTime())
             }
@@ -379,5 +384,73 @@ extension PulseViewController {
                 self.thresholdLabel.text = "Cover the back camera until the image turns red 🟥"
             }
         }
+    }
+    typealias RGB = (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)
+    typealias HSV = (hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat)
+
+    func rgb2hsv(_ rgb: RGB) -> HSV {
+        var hsb: HSV = (hue: 0.0, saturation: 0.0, brightness: 0.0, alpha: 0.0)
+        
+        let rgbRed: CGFloat = rgb.red
+        let rgbGreen: CGFloat = rgb.green
+        let rgbBlue: CGFloat = rgb.blue
+        
+        let maxV: CGFloat = max(rgbRed, max(rgbGreen, rgbBlue))
+        let minV: CGFloat = min(rgbRed, min(rgbGreen, rgbBlue))
+        var h: CGFloat = 0
+        var s: CGFloat = 0
+        let b: CGFloat = maxV
+        
+        let d: CGFloat = maxV - minV
+        
+        s = maxV == 0 ? 0 : d / minV;
+        
+        if (maxV == minV) {
+            h = 0
+        } else {
+            if (maxV == rgbRed) {
+                h = (rgbGreen - rgbBlue) / d + (rgbGreen < rgbBlue ? 6 : 0)
+            } else if (maxV == rgbGreen) {
+                h = (rgbBlue - rgbRed) / d + 2
+            } else if (maxV == rgbBlue) {
+                h = (rgbRed - rgbGreen) / d + 4
+            }
+            
+            h /= 6;
+        }
+        
+        hsb.hue = h
+        hsb.saturation = s
+        hsb.brightness = b
+        hsb.alpha = rgb.alpha
+        return hsb
+    }
+    func processValue(value: Double) -> Double {
+        xv[0] = xv[1]
+        xv[1] = xv[2]
+        xv[2] = xv[3]
+        xv[3] = xv[4]
+        xv[4] = xv[5]
+        xv[5] = xv[6]
+        xv[6] = xv[7]
+        xv[7] = xv[8]
+        xv[8] = xv[9]
+        xv[9] = xv[10]
+        xv[10] = value/1.894427025e+01
+        
+        yv[0] = yv[1]
+        yv[1] = yv[2]
+        yv[2] = yv[3]
+        yv[3] = yv[4]
+        yv[4] = yv[5]
+        yv[5] = yv[6]
+        yv[6] = yv[7]
+        yv[7] = yv[8]
+        yv[8] = yv[9]
+        yv[9] = yv[10]
+
+        yv[10] = (xv[10] - xv[0]) + 5 * (xv[2] - xv[8]) + 10 * (xv[6] - xv[4]) + (-0.0000000000 * yv[0]) + (0.0357796363 * yv[1]) + (-0.1476158522 * yv[2]) + (0.3992561394 * yv[3]) + (-1.1743136181 * yv[4]) + (2.4692165842 * yv[5]) + (-3.3820859632 * yv[6]) + (3.9628972812 * yv[7]) + (-4.3832594900 * yv[8]) + (3.2101976096 * yv[9])
+
+        return yv[10]
     }
 }

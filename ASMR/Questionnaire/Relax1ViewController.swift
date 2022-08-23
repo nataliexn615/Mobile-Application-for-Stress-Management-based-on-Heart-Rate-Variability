@@ -1,8 +1,8 @@
 //
-//  SignUpViewController.swift
+//  Relax1ViewController.swift
 //  ASMR
 //
-//  Created by Ying Nam lee on 20/1/2021.
+//  Created by Li Cheuk Yin on 20/1/2021.
 //  Copyright © 2021 Li Cheuk Yin. All rights reserved.
 //
 
@@ -96,14 +96,7 @@ class Relax1ViewController: UIViewController {
                     Answer(text: "Flying", type: .physicalTouch),
                     Answer(text: "Driving Cars", type: .eating)
             ]),
-//        Question(text: "It’s the middle of a storm and a lady mutters something but the wind is too loud to hear her. Do you….",
-//                 type: .single,
-//                 answers: [
-//                    Answer(text: "I dislike them", type: .crinkling),
-//                    Answer(text: "I get a little nervous", type: .physicalTouch),
-//                    Answer(text: "I barely notice them", type: .whispering),
-//                    Answer(text: "I love them", type: .pageTurning)
-//            ]),
+
         Question(text: "It’s the middle of a storm and a lady mutters something but the wind is too loud to hear her. Do you….",
              type: .single,
              answers: [
@@ -172,7 +165,7 @@ class Relax1ViewController: UIViewController {
         singleButton2.layer.cornerRadius = 8.0
         singleButton3.layer.cornerRadius = 8.0
         singleButton4.layer.cornerRadius = 8.0
-        // Do any additional setup after loading the view.
+
     }
     
   func updateUI() {

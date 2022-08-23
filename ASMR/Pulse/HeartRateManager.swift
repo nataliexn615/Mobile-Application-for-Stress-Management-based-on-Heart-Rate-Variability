@@ -1,9 +1,9 @@
 //
 //  HeartRateManager.swift
-//  Pulse
+//  ASMR
 //
-//  Created by Athanasios Papazoglou on 18/7/20.
-//  Copyright © 2020 Athanasios Papazoglou. All rights reserved.
+//  Created by Li Cheuk Yin on 20/1/2021.
+//  Copyright © 2021 Li Cheuk Yin. All rights reserved.
 //
 
 import Foundation
@@ -48,26 +48,27 @@ class HeartRateManager: NSObject {
         super.init()
         videoDevice = cameraType.captureDevice()
         
-        // MARK: - Setup Video Format
+   
         do {
             captureSession.sessionPreset = .low
             if let preferredSpec = preferredSpec {
-                // Update the format with a preferred fps
+               
                 videoDevice.updateFormatWithPreferredVideoSpec(preferredSpec: preferredSpec)
             }
         }
         
-        // MARK: - Setup video device input
+    
         let videoDeviceInput: AVCaptureDeviceInput
         do {
             videoDeviceInput = try AVCaptureDeviceInput(device: videoDevice)
+            captureSession.removeInput(videoDeviceInput)
         } catch let error {
             fatalError("Could not create AVCaptureDeviceInput instance with error: \(error).")
         }
         guard captureSession.canAddInput(videoDeviceInput) else { fatalError() }
         captureSession.addInput(videoDeviceInput)
         
-        // MARK: - Setup preview layer
+        
         if let previewContainer = previewContainer {
             let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
             previewLayer.frame = previewContainer.bounds
@@ -77,10 +78,11 @@ class HeartRateManager: NSObject {
             self.previewLayer = previewLayer
         }
         
-        // MARK: - Setup video output
+       
         let videoDataOutput = AVCaptureVideoDataOutput()
         videoDataOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey : NSNumber(value: kCVPixelFormatType_32BGRA)] as [String : Any]
         videoDataOutput.alwaysDiscardsLateVideoFrames = true
+        captureSession.removeOutput(videoDataOutput)
         let queue = DispatchQueue(label: "com.covidsense.videosamplequeue")
         videoDataOutput.setSampleBufferDelegate(self, queue: queue)
         guard captureSession.canAddOutput(videoDataOutput) else {
@@ -91,34 +93,16 @@ class HeartRateManager: NSObject {
     }
     
     func startCapture() {
-        #if DEBUG
-        print(#function + "\(self.classForCoder)/")
-        #endif
-        if captureSession.isRunning {
-            #if DEBUG
-            print("Capture Session is already running 🏃‍♂️.")
-            #endif
-            return
-        }
         captureSession.startRunning()
     }
     
     func stopCapture() {
-        #if DEBUG
-        print(#function + "\(self.classForCoder)/")
-        #endif
-        if !captureSession.isRunning {
-            #if DEBUG
-            print("Capture Session has already stopped 🛑.")
-            #endif
-            return
-        }
         captureSession.stopRunning()
     }
 }
 
 extension HeartRateManager: AVCaptureVideoDataOutputSampleBufferDelegate {
-    // MARK: - Export buffer from video frame
+   
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         if connection.videoOrientation != .portrait {
             connection.videoOrientation = .portrait

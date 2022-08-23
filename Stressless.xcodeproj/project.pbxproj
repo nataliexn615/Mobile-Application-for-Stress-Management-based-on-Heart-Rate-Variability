@@ -3,18 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2109AE9925C5B1E2005B6A57 /* Emotion1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2109AE9825C5B1E1005B6A57 /* Emotion1.mlmodel */; };
 		210EFEE626037E360024B9C6 /* AVCaptureDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210EFEE526037E360024B9C6 /* AVCaptureDevice+Extensions.swift */; };
-		210EFEEB26037E4F0024B9C6 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210EFEEA26037E4F0024B9C6 /* ColorUtils.swift */; };
-		210EFEF026037E6D0024B9C6 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210EFEEF26037E6D0024B9C6 /* Filter.swift */; };
 		210EFEF526037E7F0024B9C6 /* PulseDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210EFEF426037E7F0024B9C6 /* PulseDetector.swift */; };
 		210EFEFA26037EA50024B9C6 /* HeartRateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210EFEF926037EA50024B9C6 /* HeartRateManager.swift */; };
-		212B77F825C08B4200DA3513 /* EmotionDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212B77F725C08B4200DA3513 /* EmotionDetectionViewController.swift */; };
-		212B77FD25C08B9200DA3513 /* EmotionFYP1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 212B77FC25C08B9200DA3513 /* EmotionFYP1.mlmodel */; };
 		2143F47E2604766100D51B41 /* EmotionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2143F47D2604766100D51B41 /* EmotionResult.swift */; };
 		2164F06525F0C3E700A9BE14 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2164F06425F0C3E700A9BE14 /* HealthKit.framework */; };
 		2187322D261355230057044E /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2187322C261355230057044E /* SettingTableViewCell.swift */; };
@@ -25,7 +20,6 @@
 		2189350825B89A04002F679F /* PulseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189350725B89A04002F679F /* PulseViewController.swift */; };
 		2189350A25B89A28002F679F /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189350925B89A28002F679F /* CalendarViewController.swift */; };
 		2189350C25B89A45002F679F /* RelaxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189350B25B89A45002F679F /* RelaxViewController.swift */; };
-		2189351025B89B4B002F679F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189350F25B89B4B002F679F /* ViewController.swift */; };
 		2189351425B89D06002F679F /* SignUp3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189351325B89D06002F679F /* SignUp3ViewController.swift */; };
 		2189351625B8B00F002F679F /* Relax1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189351525B8B00F002F679F /* Relax1ViewController.swift */; };
 		2189351825B8B0FE002F679F /* RelaxResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189351725B8B0FE002F679F /* RelaxResultViewController.swift */; };
@@ -34,14 +28,14 @@
 		2189351C25B8BF2E002F679F /* Relax1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189351525B8B00F002F679F /* Relax1ViewController.swift */; };
 		2189B6152600F03900BF4EE0 /* playYoutubeVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189B6142600F03900BF4EE0 /* playYoutubeVideo.swift */; };
 		218AF80125BC2191000A9800 /* displayVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218AF80025BC2191000A9800 /* displayVideo.swift */; };
-		218AF80325BC5A46000A9800 /* ice.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 218AF80225BC5A46000A9800 /* ice.mp4 */; };
 		2190044525BB482200DDAB72 /* ASMRmenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2190044425BB482200DDAB72 /* ASMRmenu.swift */; };
 		2190044B25BB585000DDAB72 /* videoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2190044A25BB585000DDAB72 /* videoData.swift */; };
 		2190044D25BB59D200DDAB72 /* TableDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2190044C25BB59D200DDAB72 /* TableDataTableViewCell.swift */; };
 		21928FEA2613398700E1CA7E /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21928FE92613398700E1CA7E /* SettingViewController.swift */; };
 		219E233125F09D6200F2BA86 /* QuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189351925B8B80F002F679F /* QuestionData.swift */; };
 		219E233225F09D6200F2BA86 /* QuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189351925B8B80F002F679F /* QuestionData.swift */; };
-		21A7920525BD9FD100527F99 /* CalendarHeatmap in Frameworks */ = {isa = PBXBuildFile; productRef = 21A7920425BD9FD100527F99 /* CalendarHeatmap */; };
+		21AD299C2624AC3800910E4B /* hi.txt in Resources */ = {isa = PBXBuildFile; fileRef = 21AD299B2624AC3800910E4B /* hi.txt */; };
+		21D8BE5E2614E0D00083C354 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D8BE5D2614E0D00083C354 /* SwitchTableViewCell.swift */; };
 		21DFFEC025B8613C001F3485 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DFFEBF25B8613C001F3485 /* AppDelegate.swift */; };
 		21DFFEC225B8613C001F3485 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DFFEC125B8613C001F3485 /* SceneDelegate.swift */; };
 		21DFFEC725B8613C001F3485 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21DFFEC525B8613C001F3485 /* Main.storyboard */; };
@@ -52,6 +46,16 @@
 		21DFFEF025B8633A001F3485 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DFFEEF25B8633A001F3485 /* LoginViewController.swift */; };
 		21DFFEF225B86350001F3485 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DFFEF125B86350001F3485 /* SignUpViewController.swift */; };
 		21DFFEF425B86741001F3485 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21DFFEF325B86741001F3485 /* GoogleService-Info.plist */; };
+		21F3109F261F636C0063F22E /* CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F3109E261F636C0063F22E /* CVPixelBuffer.swift */; };
+		21F310AA261F64C70063F22E /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F310A9261F64C70063F22E /* InfoCell.swift */; };
+		21F310AF261F66BD0063F22E /* CurvedVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F310AE261F66BD0063F22E /* CurvedVIew.swift */; };
+		21F310B4261F66EB0063F22E /* ModelDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F310B3261F66EB0063F22E /* ModelDataHandler.swift */; };
+		21F310B9261F671F0063F22E /* EmoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F310B8261F671F0063F22E /* EmoViewController.swift */; };
+		21F310BE261F67580063F22E /* InferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F310BD261F67580063F22E /* InferenceViewController.swift */; };
+		21F310C3261F677F0063F22E /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F310C2261F677F0063F22E /* PreviewView.swift */; };
+		21F310C8261F67A00063F22E /* CameraFeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F310C7261F67A00063F22E /* CameraFeedManager.swift */; };
+		21F310CE261F67CC0063F22E /* google_vision.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 21F310CC261F67CB0063F22E /* google_vision.tflite */; };
+		21F310CF261F67CC0063F22E /* google_vision.txt in Resources */ = {isa = PBXBuildFile; fileRef = 21F310CD261F67CC0063F22E /* google_vision.txt */; };
 		43077C3B9F58C91DEAE23409 /* Pods_ASMR_ASMRUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 318BCB7EC3361DAF76DC8550 /* Pods_ASMR_ASMRUITests.framework */; };
 		CD7E6A94843A5042593A761E /* Pods_ASMRTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4DAA345D18224A8B08B265 /* Pods_ASMRTests.framework */; };
 		F4B35248A638EC9119F6515F /* Pods_ASMR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D1A119AB8CED40E70FE95C3 /* Pods_ASMR.framework */; };
@@ -78,14 +82,9 @@
 		03DBC841F4A514859BD2EB4B /* Pods-ASMR-ASMRUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASMR-ASMRUITests.release.xcconfig"; path = "Target Support Files/Pods-ASMR-ASMRUITests/Pods-ASMR-ASMRUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0710585EA50463A0AABB5A21 /* Pods-ASMR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASMR.debug.xcconfig"; path = "Target Support Files/Pods-ASMR/Pods-ASMR.debug.xcconfig"; sourceTree = "<group>"; };
 		13C83925F60CA05616CB9821 /* Pods-ASMRTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASMRTests.release.xcconfig"; path = "Target Support Files/Pods-ASMRTests/Pods-ASMRTests.release.xcconfig"; sourceTree = "<group>"; };
-		2109AE9825C5B1E1005B6A57 /* Emotion1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Emotion1.mlmodel; sourceTree = "<group>"; };
 		210EFEE526037E360024B9C6 /* AVCaptureDevice+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureDevice+Extensions.swift"; sourceTree = "<group>"; };
-		210EFEEA26037E4F0024B9C6 /* ColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
-		210EFEEF26037E6D0024B9C6 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		210EFEF426037E7F0024B9C6 /* PulseDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseDetector.swift; sourceTree = "<group>"; };
 		210EFEF926037EA50024B9C6 /* HeartRateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateManager.swift; sourceTree = "<group>"; };
-		212B77F725C08B4200DA3513 /* EmotionDetectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionDetectionViewController.swift; sourceTree = "<group>"; };
-		212B77FC25C08B9200DA3513 /* EmotionFYP1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = EmotionFYP1.mlmodel; sourceTree = "<group>"; };
 		2143F47D2604766100D51B41 /* EmotionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionResult.swift; sourceTree = "<group>"; };
 		2164F06325F0C3E700A9BE14 /* ASMR.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ASMR.entitlements; sourceTree = "<group>"; };
 		2164F06425F0C3E700A9BE14 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -97,18 +96,19 @@
 		2189350725B89A04002F679F /* PulseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseViewController.swift; sourceTree = "<group>"; };
 		2189350925B89A28002F679F /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		2189350B25B89A45002F679F /* RelaxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxViewController.swift; sourceTree = "<group>"; };
-		2189350F25B89B4B002F679F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2189351325B89D06002F679F /* SignUp3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp3ViewController.swift; sourceTree = "<group>"; };
 		2189351525B8B00F002F679F /* Relax1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relax1ViewController.swift; sourceTree = "<group>"; };
 		2189351725B8B0FE002F679F /* RelaxResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxResultViewController.swift; sourceTree = "<group>"; };
 		2189351925B8B80F002F679F /* QuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionData.swift; sourceTree = "<group>"; };
 		2189B6142600F03900BF4EE0 /* playYoutubeVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playYoutubeVideo.swift; sourceTree = "<group>"; };
 		218AF80025BC2191000A9800 /* displayVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = displayVideo.swift; sourceTree = "<group>"; };
-		218AF80225BC5A46000A9800 /* ice.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ice.mp4; sourceTree = "<group>"; };
 		2190044425BB482200DDAB72 /* ASMRmenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASMRmenu.swift; sourceTree = "<group>"; };
 		2190044A25BB585000DDAB72 /* videoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = videoData.swift; sourceTree = "<group>"; };
 		2190044C25BB59D200DDAB72 /* TableDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDataTableViewCell.swift; sourceTree = "<group>"; };
 		21928FE92613398700E1CA7E /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		21AD299B2624AC3800910E4B /* hi.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hi.txt; sourceTree = "<group>"; };
+		21AD29A02624AC4200910E4B /* hi.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = hi.tflite; sourceTree = "<group>"; };
+		21D8BE5D2614E0D00083C354 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		21DFFEBC25B8613B001F3485 /* ASMR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ASMR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21DFFEBF25B8613C001F3485 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21DFFEC125B8613C001F3485 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +125,16 @@
 		21DFFEEF25B8633A001F3485 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		21DFFEF125B86350001F3485 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		21DFFEF325B86741001F3485 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		21F3109E261F636C0063F22E /* CVPixelBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVPixelBuffer.swift; sourceTree = "<group>"; };
+		21F310A9261F64C70063F22E /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
+		21F310AE261F66BD0063F22E /* CurvedVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedVIew.swift; sourceTree = "<group>"; };
+		21F310B3261F66EB0063F22E /* ModelDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataHandler.swift; sourceTree = "<group>"; };
+		21F310B8261F671F0063F22E /* EmoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoViewController.swift; sourceTree = "<group>"; };
+		21F310BD261F67580063F22E /* InferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InferenceViewController.swift; sourceTree = "<group>"; };
+		21F310C2261F677F0063F22E /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
+		21F310C7261F67A00063F22E /* CameraFeedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFeedManager.swift; sourceTree = "<group>"; };
+		21F310CC261F67CB0063F22E /* google_vision.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = google_vision.tflite; sourceTree = "<group>"; };
+		21F310CD261F67CC0063F22E /* google_vision.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = google_vision.txt; sourceTree = "<group>"; };
 		2329C710945B053B66488A28 /* Pods-ASMR-ASMRUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASMR-ASMRUITests.debug.xcconfig"; path = "Target Support Files/Pods-ASMR-ASMRUITests/Pods-ASMR-ASMRUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		318BCB7EC3361DAF76DC8550 /* Pods_ASMR_ASMRUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ASMR_ASMRUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E58D8FEAEBCFA8317507D41 /* Pods-ASMRTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASMRTests.debug.xcconfig"; path = "Target Support Files/Pods-ASMRTests/Pods-ASMRTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -140,7 +150,6 @@
 			files = (
 				2164F06525F0C3E700A9BE14 /* HealthKit.framework in Frameworks */,
 				F4B35248A638EC9119F6515F /* Pods_ASMR.framework in Frameworks */,
-				21A7920525BD9FD100527F99 /* CalendarHeatmap in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,9 +183,6 @@
 		2165F1EF26046DEC00630F43 /* EmotionDetection */ = {
 			isa = PBXGroup;
 			children = (
-				2109AE9825C5B1E1005B6A57 /* Emotion1.mlmodel */,
-				212B77FC25C08B9200DA3513 /* EmotionFYP1.mlmodel */,
-				212B77F725C08B4200DA3513 /* EmotionDetectionViewController.swift */,
 				2143F47D2604766100D51B41 /* EmotionResult.swift */,
 			);
 			path = EmotionDetection;
@@ -199,26 +205,17 @@
 			children = (
 				2189350725B89A04002F679F /* PulseViewController.swift */,
 				210EFEE526037E360024B9C6 /* AVCaptureDevice+Extensions.swift */,
-				210EFEEA26037E4F0024B9C6 /* ColorUtils.swift */,
-				210EFEEF26037E6D0024B9C6 /* Filter.swift */,
 				210EFEF426037E7F0024B9C6 /* PulseDetector.swift */,
 				210EFEF926037EA50024B9C6 /* HeartRateManager.swift */,
 			);
 			path = Pulse;
 			sourceTree = "<group>";
 		};
-		218AF80425BC5AC0000A9800 /* Videos */ = {
-			isa = PBXGroup;
-			children = (
-				218AF80225BC5A46000A9800 /* ice.mp4 */,
-			);
-			path = Videos;
-			sourceTree = "<group>";
-		};
 		21928FEE2613399C00E1CA7E /* Setting */ = {
 			isa = PBXGroup;
 			children = (
 				21928FE92613398700E1CA7E /* SettingViewController.swift */,
+				21D8BE5D2614E0D00083C354 /* SwitchTableViewCell.swift */,
 				2187322C261355230057044E /* SettingTableViewCell.swift */,
 				21873234261370F70057044E /* changeJob.swift */,
 			);
@@ -281,23 +278,22 @@
 			isa = PBXGroup;
 			children = (
 				2164F06325F0C3E700A9BE14 /* ASMR.entitlements */,
-				21816B6025F33C500029A3B2 /* ASMR videos */,
-				218AF80425BC5AC0000A9800 /* Videos */,
 				21DFFEC525B8613C001F3485 /* Main.storyboard */,
-				21928FEE2613399C00E1CA7E /* Setting */,
+				2189350525B899DB002F679F /* HomeViewController.swift */,
+				21F31096261F5EE70063F22E /* Emotion_TF */,
+				219E232C25F09D2A00F2BA86 /* Register */,
+				219E232B25F09D1C00F2BA86 /* Login */,
+				2186857825EFEA44007C1873 /* Pulse */,
+				2164F12325F21EDA00A9BE14 /* Calendar */,
+				219E233025F09D5300F2BA86 /* Questionnaire */,
+				21816B6025F33C500029A3B2 /* ASMR videos */,
 				2165F1EF26046DEC00630F43 /* EmotionDetection */,
+				21928FEE2613399C00E1CA7E /* Setting */,
 				21DFFEF325B86741001F3485 /* GoogleService-Info.plist */,
 				21DFFEBF25B8613C001F3485 /* AppDelegate.swift */,
 				21DFFEC125B8613C001F3485 /* SceneDelegate.swift */,
-				2189350525B899DB002F679F /* HomeViewController.swift */,
-				2186857825EFEA44007C1873 /* Pulse */,
-				2164F12325F21EDA00A9BE14 /* Calendar */,
-				219E232B25F09D1C00F2BA86 /* Login */,
-				219E232C25F09D2A00F2BA86 /* Register */,
 				21DFFEC825B86141001F3485 /* Assets.xcassets */,
-				219E233025F09D5300F2BA86 /* Questionnaire */,
 				21DFFECA25B86141001F3485 /* LaunchScreen.storyboard */,
-				2189350F25B89B4B002F679F /* ViewController.swift */,
 				21DFFECD25B86141001F3485 /* Info.plist */,
 			);
 			path = ASMR;
@@ -319,6 +315,81 @@
 				21DFFEE325B86141001F3485 /* Info.plist */,
 			);
 			path = ASMRUITests;
+			sourceTree = "<group>";
+		};
+		21F31096261F5EE70063F22E /* Emotion_TF */ = {
+			isa = PBXGroup;
+			children = (
+				21F3109D261F634D0063F22E /* Model */,
+				21F3109C261F633E0063F22E /* Camera Feed */,
+				21F3109B261F632C0063F22E /* ViewControllers */,
+				21F3109A261F630C0063F22E /* ModelDataHandler */,
+				21F31099261F62FE0063F22E /* Views */,
+				21F31098261F616F0063F22E /* Cells */,
+				21F31097261F5FC80063F22E /* Extensions */,
+			);
+			path = Emotion_TF;
+			sourceTree = "<group>";
+		};
+		21F31097261F5FC80063F22E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				21F3109E261F636C0063F22E /* CVPixelBuffer.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		21F31098261F616F0063F22E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				21F310A9261F64C70063F22E /* InfoCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		21F31099261F62FE0063F22E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				21F310AE261F66BD0063F22E /* CurvedVIew.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		21F3109A261F630C0063F22E /* ModelDataHandler */ = {
+			isa = PBXGroup;
+			children = (
+				21F310B3261F66EB0063F22E /* ModelDataHandler.swift */,
+			);
+			path = ModelDataHandler;
+			sourceTree = "<group>";
+		};
+		21F3109B261F632C0063F22E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				21F310B8261F671F0063F22E /* EmoViewController.swift */,
+				21F310BD261F67580063F22E /* InferenceViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		21F3109C261F633E0063F22E /* Camera Feed */ = {
+			isa = PBXGroup;
+			children = (
+				21F310C2261F677F0063F22E /* PreviewView.swift */,
+				21F310C7261F67A00063F22E /* CameraFeedManager.swift */,
+			);
+			path = "Camera Feed";
+			sourceTree = "<group>";
+		};
+		21F3109D261F634D0063F22E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				21AD29A02624AC4200910E4B /* hi.tflite */,
+				21AD299B2624AC3800910E4B /* hi.txt */,
+				21F310CC261F67CB0063F22E /* google_vision.tflite */,
+				21F310CD261F67CC0063F22E /* google_vision.txt */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		45523EE3DD6BC33CAF1751D7 /* Frameworks */ = {
@@ -364,7 +435,6 @@
 			);
 			name = ASMR;
 			packageProductDependencies = (
-				21A7920425BD9FD100527F99 /* CalendarHeatmap */,
 			);
 			productName = ASMR;
 			productReference = 21DFFEBC25B8613B001F3485 /* ASMR.app */;
@@ -432,7 +502,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 21DFFEB725B8613B001F3485 /* Build configuration list for PBXProject "ASMR" */;
+			buildConfigurationList = 21DFFEB725B8613B001F3485 /* Build configuration list for PBXProject "Stressless" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -442,7 +512,6 @@
 			);
 			mainGroup = 21DFFEB325B8613B001F3485;
 			packageReferences = (
-				21A7920325BD9FD100527F99 /* XCRemoteSwiftPackageReference "CalendarHeatmap" */,
 			);
 			productRefGroup = 21DFFEBD25B8613B001F3485 /* Products */;
 			projectDirPath = "";
@@ -460,10 +529,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21AD299C2624AC3800910E4B /* hi.txt in Resources */,
 				21DFFECC25B86141001F3485 /* LaunchScreen.storyboard in Resources */,
-				218AF80325BC5A46000A9800 /* ice.mp4 in Resources */,
 				21DFFEF425B86741001F3485 /* GoogleService-Info.plist in Resources */,
 				21DFFEC925B86141001F3485 /* Assets.xcassets in Resources */,
+				21F310CF261F67CC0063F22E /* google_vision.txt in Resources */,
+				21F310CE261F67CC0063F22E /* google_vision.tflite in Resources */,
 				21DFFEC725B8613C001F3485 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -592,35 +663,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				212B77F825C08B4200DA3513 /* EmotionDetectionViewController.swift in Sources */,
+				21F310BE261F67580063F22E /* InferenceViewController.swift in Sources */,
 				2189350C25B89A45002F679F /* RelaxViewController.swift in Sources */,
 				2187323E2613B1630057044E /* logout.swift in Sources */,
 				2189350A25B89A28002F679F /* CalendarViewController.swift in Sources */,
 				2189351425B89D06002F679F /* SignUp3ViewController.swift in Sources */,
 				210EFEFA26037EA50024B9C6 /* HeartRateManager.swift in Sources */,
-				212B77FD25C08B9200DA3513 /* EmotionFYP1.mlmodel in Sources */,
+				21F310C3261F677F0063F22E /* PreviewView.swift in Sources */,
 				21DFFEF025B8633A001F3485 /* LoginViewController.swift in Sources */,
-				2189351025B89B4B002F679F /* ViewController.swift in Sources */,
+				21F310B9261F671F0063F22E /* EmoViewController.swift in Sources */,
 				2190044525BB482200DDAB72 /* ASMRmenu.swift in Sources */,
+				21F310AA261F64C70063F22E /* InfoCell.swift in Sources */,
+				21D8BE5E2614E0D00083C354 /* SwitchTableViewCell.swift in Sources */,
+				21F310C8261F67A00063F22E /* CameraFeedManager.swift in Sources */,
 				210EFEF526037E7F0024B9C6 /* PulseDetector.swift in Sources */,
+				21F3109F261F636C0063F22E /* CVPixelBuffer.swift in Sources */,
 				21873235261370F70057044E /* changeJob.swift in Sources */,
 				2189350425B8997B002F679F /* SignUp2ViewController.swift in Sources */,
 				210EFEE626037E360024B9C6 /* AVCaptureDevice+Extensions.swift in Sources */,
-				210EFEEB26037E4F0024B9C6 /* ColorUtils.swift in Sources */,
 				21DFFEC025B8613C001F3485 /* AppDelegate.swift in Sources */,
+				21F310B4261F66EB0063F22E /* ModelDataHandler.swift in Sources */,
 				2189351625B8B00F002F679F /* Relax1ViewController.swift in Sources */,
 				21DFFEC225B8613C001F3485 /* SceneDelegate.swift in Sources */,
 				218AF80125BC2191000A9800 /* displayVideo.swift in Sources */,
 				21DFFEF225B86350001F3485 /* SignUpViewController.swift in Sources */,
 				2190044D25BB59D200DDAB72 /* TableDataTableViewCell.swift in Sources */,
-				2109AE9925C5B1E2005B6A57 /* Emotion1.mlmodel in Sources */,
+				21F310AF261F66BD0063F22E /* CurvedVIew.swift in Sources */,
 				2187322D261355230057044E /* SettingTableViewCell.swift in Sources */,
 				2189350825B89A04002F679F /* PulseViewController.swift in Sources */,
 				2189351A25B8B80F002F679F /* QuestionData.swift in Sources */,
 				2190044B25BB585000DDAB72 /* videoData.swift in Sources */,
 				2189351825B8B0FE002F679F /* RelaxResultViewController.swift in Sources */,
 				21928FEA2613398700E1CA7E /* SettingViewController.swift in Sources */,
-				210EFEF026037E6D0024B9C6 /* Filter.swift in Sources */,
 				2189B6152600F03900BF4EE0 /* playYoutubeVideo.swift in Sources */,
 				2189350625B899DB002F679F /* HomeViewController.swift in Sources */,
 				2143F47E2604766100D51B41 /* EmotionResult.swift in Sources */,
@@ -923,7 +997,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		21DFFEB725B8613B001F3485 /* Build configuration list for PBXProject "ASMR" */ = {
+		21DFFEB725B8613B001F3485 /* Build configuration list for PBXProject "Stressless" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				21DFFEE425B86141001F3485 /* Debug */,
@@ -960,25 +1034,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		21A7920325BD9FD100527F99 /* XCRemoteSwiftPackageReference "CalendarHeatmap" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Zacharysp/CalendarHeatmap.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		21A7920425BD9FD100527F99 /* CalendarHeatmap */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 21A7920325BD9FD100527F99 /* XCRemoteSwiftPackageReference "CalendarHeatmap" */;
-			productName = CalendarHeatmap;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 21DFFEB425B8613B001F3485 /* Project object */;
 }

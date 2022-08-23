@@ -2,7 +2,7 @@
 //  playYoutubeVideo.swift
 //  ASMR
 //
-//  Created by Ying Nam lee on 16/3/2021.
+//  Created by Li Cheuk Yin on 20/1/2021.
 //  Copyright © 2021 Li Cheuk Yin. All rights reserved.
 //
 
@@ -19,7 +19,7 @@ class playYoutubeVideo: UIViewController{
         myPlayerr.load(withVideoId:displayVideo.choseVideo)
 }
     @IBAction func finished(_ sender: Any) {
-        let vc: UIViewController = storyboard!.instantiateViewController(withIdentifier: "emotiondetection")
+        let vc: UIViewController = storyboard!.instantiateViewController(withIdentifier: "EmoViewController")
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }

@@ -1,9 +1,9 @@
 //
-//  AVCaptureDevice+Extensions.swift
-//  Pulse
+//  AVCaptureDevice.swift
+//  ASMR
 //
-//  Created by Athanasios Papazoglou on 18/7/20.
-//  Copyright © 2020 Athanasios Papazoglou. All rights reserved.
+//  Created by Li Cheuk Yin on 20/1/2021.
+//  Copyright © 2021 Li Cheuk Yin. All rights reserved.
 //
 
 import Foundation

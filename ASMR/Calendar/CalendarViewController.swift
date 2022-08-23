@@ -1,6 +1,13 @@
+//
+//  CalendarViewController.swift
+//  ASMR
+//
+//  Created by Li Cheuk Yin on 20/1/2021.
+//  Copyright © 2021 Li Cheuk Yin. All rights reserved.
+//
 import UIKit
 import HealthKit
-//import CalendarHeatmap
+
 import FSCalendar
 import Foundation
 import FirebaseAuth
@@ -8,7 +15,8 @@ import Firebase
 
 class CalendarViewController:
     UIViewController,UITableViewDelegate, UITableViewDataSource, FSCalendarDelegate{
-    var getTime:String = ""
+    static var getTime:String = ""
+    static var getDate:String = ""
     let healthStore = HKHealthStore()
     @IBOutlet var tableView: UITableView!
     @IBOutlet var calendarView: FSCalendar!
@@ -19,7 +27,7 @@ class CalendarViewController:
     @IBOutlet weak var detailTextLabel: UILabel!
     override func viewDidLoad() {
        
-       // getHRVdatabase()
+
         Database.database().reference().child("PersonalInfo").child(uid!).observe(.value, with: { [self] snapshot in
             for child in snapshot.children{
                 let valueD = child as! DataSnapshot
@@ -37,17 +45,14 @@ class CalendarViewController:
         super.viewDidLoad()
         let today = Date()
         let formatter3 = DateFormatter()
-        formatter3.dateFormat = "dd/MM/yyyy"
+        formatter3.dateFormat = "dd-MM-yyyy"
         CalendarViewController.hehehaha = formatter3.string(from: today)
-        //print(formatter3.string(from: today))
+  
         calendarView.delegate = self
        
-        getHRVdatabase()
         tableView.delegate = self
         tableView.dataSource = self
-//        DispatchQueue.main.async {
-//            self.tableView.reloadData()
-//        }
+
     }
     func authorizeHealthKit(){
         let read = Set([HKObjectType.quantityType(forIdentifier: .heartRateVariabilitySDNN)!])
@@ -65,13 +70,14 @@ class CalendarViewController:
     }
     static var hrvArray = [hrvData]()
     static var hrvtableArray = [hrvData]()
+    
     func latestHeartRate() {
         
         guard let sampleType = HKObjectType.quantityType(forIdentifier: .heartRateVariabilitySDNN) else{
             return
         }
         
-        let startDate = Calendar.current.date(byAdding: .month, value: -1, to: Date())
+        let startDate = Calendar.current.date(byAdding: .month, value: -2, to: Date())
         let predicate = HKQuery.predicateForSamples(withStart: startDate, end: Date(), options: .strictEndDate)
         let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)
         let query = HKSampleQuery(sampleType: sampleType, predicate: predicate, limit:
@@ -80,12 +86,12 @@ class CalendarViewController:
                 return
             }
             print(result?.count)
-            CalendarViewController.hrvArray.removeAll()
+          
             for data in result as? [HKQuantitySample] ?? [] {
                 let unit = HKUnit(from: "ms")
                 let latestHRV = data.quantity.doubleValue(for: unit)
                 let dateFormator = DateFormatter()
-                dateFormator.dateFormat = "dd/MM/yyyy"
+                dateFormator.dateFormat = "dd-MM-yyyy"
                 let timeFormator = DateFormatter()
                 timeFormator.dateFormat = "hh:mm"
                 let StartDate = dateFormator.string(from: data.startDate)
@@ -202,7 +208,7 @@ class CalendarViewController:
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition){
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy"
+        dateFormatter.dateFormat = "dd-MM-yyyy"
         
         let formattedDate = dateFormatter.string(from: date)
         CalendarViewController.hehehaha = String(formattedDate)
@@ -216,28 +222,41 @@ class CalendarViewController:
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        getHRVdatabase()
+    }
+    
     func getHRVdatabase(){
+        CalendarViewController.hrvArray.removeAll()
         authorizeHealthKit()
-    //    CalendarViewController.hrvArray.removeAll()
+   
         Database.database().reference().child("HRVData").child(uid!).observe(.value, with: { [self] snapshot in
-            CalendarViewController.hrvArray.removeAll()
+         
             for child in snapshot.children{
                 let valueD = child as! DataSnapshot
-                getTime = valueD.key
+                CalendarViewController.getDate = valueD.key
+              
                 Database.database().reference().child("HRVData").child(uid!).child(valueD.key).observe(.value, with: { [self] snapshot in
-                    //    let subscriptionSnap = snapshot.childSnapshot(forPath: "uid!")
+               
                     let dateFormator = DateFormatter()
-                    dateFormator.dateFormat = "dd/MM/yyyy"
+                    dateFormator.dateFormat = "dd-MM-yyyy"
                     let startDate = Calendar.current.date(byAdding: .month, value: 0, to: Date())
                     let StartDate = dateFormator.string(from: startDate!)
                                                                                                         
                     for child in snapshot.children{
                         let getData = child as! DataSnapshot
-                        
-                        if getData.key == "HRVData"{
-                            let x: Double =  getData.value as! Double
+                        CalendarViewController.getTime = getData.key
+                        Database.database().reference().child("HRVData").child(uid!).child(valueD.key)
+                            .child(CalendarViewController.getTime).observe(.value, with: { [self] snapshot in
+                                                        for child in snapshot.children{
+                            let getData2 = child as! DataSnapshot
+                        if getData2.key == "HRVData"{
+                            let x: Double =  getData2.value as! Double
                             HomeViewController.mykey  = Double(round(1000*x)/1000)
                             let display:String = String(HomeViewController.mykey)
-                            CalendarViewController.hrvArray.append(hrvData(date: String(StartDate), time:String(valueD.key), HRV:String(HomeViewController.mykey)))
-                        }}})}})}}
-            
+                            CalendarViewController.hrvArray.append(hrvData(date: String(valueD.key), time:String(getData.key), HRV:String(HomeViewController.mykey)))
+                        }
+
+                                                        }})}})}})}}
+                        
+          

@@ -2,7 +2,7 @@
 //  QuestionData.swift
 //  ASMR
 //
-//  Created by Ying Nam lee on 21/1/2021.
+//  Created by Li Cheuk Yin on 20/1/2021.
 //  Copyright © 2021 Li Cheuk Yin. All rights reserved.
 //
 

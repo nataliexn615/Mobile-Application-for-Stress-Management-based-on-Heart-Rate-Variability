@@ -1,8 +1,8 @@
 //
-//  SignUpViewController.swift
+//  RelaxResultViewController.swift
 //  ASMR
 //
-//  Created by Ying Nam lee on 20/1/2021.
+//  Created by Li Cheuk Yin on 20/1/2021.
 //  Copyright © 2021 Li Cheuk Yin. All rights reserved.
 //
 
@@ -21,7 +21,7 @@ class RelaxResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         calculatePersonalityResult()
-        // Do any additional setup after loading the view.
+       
         navigationItem.hidesBackButton = true
     }
     

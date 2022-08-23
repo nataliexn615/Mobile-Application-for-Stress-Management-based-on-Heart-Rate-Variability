@@ -1,0 +1,6 @@
+framework module Pods_ASMR_ASMRUITests {
+  umbrella header "Pods-ASMR-ASMRUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

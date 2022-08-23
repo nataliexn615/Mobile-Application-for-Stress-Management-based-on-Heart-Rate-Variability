@@ -1,8 +1,8 @@
 //
-//  VideoPlayerViewController.swift
+//  videoData.swift
 //  ASMR
 //
-//  Created by Ying Nam lee on 23/1/2021.
+//  Created by Li Cheuk Yin on 20/1/2021.
 //  Copyright © 2021 Li Cheuk Yin. All rights reserved.
 //
 
@@ -36,7 +36,7 @@ return [v1,v2,v3,v4,v5,v6]
 }
 static func fetchTappingVideos() -> [Video] {
 
-    let v1 = Video(authorName: "Addictive Tapping", thumbNail: "t1", videoID: "https://youtu.be/sIgkTYTWPz8")
+    let v1 = Video(authorName: "Addictive Tapping", thumbNail: "t1", videoID: "sIgkTYTWPz8")
     let v2 = Video(authorName: "Tapping", thumbNail: "t2",  videoID: "3x5PzivPJ3Q")
     let v3 = Video(authorName: "Massage Triggers", thumbNail: "t3", videoID: "QUlkoUqA21E")
      let v4 = Video(authorName: "Tingles", thumbNail: "t4", videoID: "yq5ud0t8tms")
@@ -58,7 +58,7 @@ static func fetchPhysicalTouchVideos() -> [Video] {
 ////////////
 static func fetchPhysicalAttentionVideos() -> [Video] {
 
-    let v1 = Video(authorName: "Pay Attention", thumbNail: "11", videoID: "4D3Ao-TYCfg")
+    let v1 = Video(authorName: "Pay Attention", thumbNail: "a1", videoID: "4D3Ao-TYCfg")
     let v2 = Video(authorName: "Nerve Exam", thumbNail: "a2",  videoID: "BAbAwhOzAOs")
     let v3 = Video(authorName: "Close Up", thumbNail: "a3", videoID: "Un0O3CycvEo")
      let v4 = Video(authorName: "Physical Exam", thumbNail: "a4", videoID: "avWY4UX1feQ")

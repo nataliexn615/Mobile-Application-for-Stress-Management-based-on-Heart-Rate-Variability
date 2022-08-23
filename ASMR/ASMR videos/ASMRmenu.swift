@@ -1,13 +1,13 @@
 //
-//  VideoMenuTableViewController.swift
-//  FirebaseAuth
+//  ASMRmenu.swift
+//  ASMR
 //
-//  Created by Ying Nam lee on 23/1/2021.
+//  Created by Li Cheuk Yin on 20/1/2021.
+//  Copyright © 2021 Li Cheuk Yin. All rights reserved.
 //
 
 import UIKit
-var pets = ["Whispering", "Tapping", "Physical Touch","physicalAttention","pageTurninglight","light", "roleplay",
-"eating","concentration","massage","rinkling"]
+var pets = ["Whispering", "Tapping", "Physical Touch","Physical Attention","Page Turning","Light", "Roleplay","Eating","Concentration","Massage","Crinkling"]
 
 class ASMRmenu: UITableViewController {
     override func viewDidLoad() {
@@ -18,12 +18,9 @@ class ASMRmenu: UITableViewController {
     
     static var getASMRCat: String = ""
     static var myIndex = 0
-//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        return "Pick your favourite"
-//    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+       
         return pets.count
 
     }

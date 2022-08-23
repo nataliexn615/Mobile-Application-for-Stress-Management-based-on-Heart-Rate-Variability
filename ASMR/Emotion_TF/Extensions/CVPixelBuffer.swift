@@ -1,65 +1,47 @@
 //
-//  File.swift
+//  CVPixelBuffer.swift
 //  ASMR
 //
-//  Created by Ying Nam lee on 9/4/2021.
+//  Created by Li Cheuk Yin on 20/1/2021.
 //  Copyright © 2021 Li Cheuk Yin. All rights reserved.
 //
-
 import Foundation
 import UIKit
 import Accelerate
 
 extension CVPixelBuffer {
 
-  /**
-   Returns thumbnail by cropping pixel buffer to biggest square and scaling the cropped image to
-   model dimensions.
-   */
+
   func centerThumbnail(ofSize size: CGSize ) -> CVPixelBuffer? {
 
-    let imageWidth = CVPixelBufferGetWidth(self)
-    let imageHeight = CVPixelBufferGetHeight(self)
-    let pixelBufferType = CVPixelBufferGetPixelFormatType(self)
+    assert(CVPixelBufferGetPixelFormatType(self) == kCVPixelFormatType_32BGRA)
 
-    assert(pixelBufferType == kCVPixelFormatType_32BGRA)
-
-    let inputImageRowBytes = CVPixelBufferGetBytesPerRow(self)
-    let imageChannels = 4
-
-    let thumbnailSize = min(imageWidth, imageHeight)
+    let thumbnailSize = min(CVPixelBufferGetWidth(self),CVPixelBufferGetHeight(self))
     CVPixelBufferLockBaseAddress(self, CVPixelBufferLockFlags(rawValue: 0))
 
-    var originX = 0
-    var originY = 0
+    var getX = 0
+    var getY = 0
 
-    if imageWidth > imageHeight {
-      originX = (imageWidth - imageHeight) / 2
+    if CVPixelBufferGetWidth(self) > CVPixelBufferGetHeight(self) {
+        getX = (CVPixelBufferGetWidth(self) - CVPixelBufferGetHeight(self)) / 2
     }
     else {
-      originY = (imageHeight - imageWidth) / 2
+        getY = (CVPixelBufferGetHeight(self) - CVPixelBufferGetWidth(self)) / 2
     }
-
-    // Finds the biggest square in the pixel buffer and advances rows based on it.
     guard let inputBaseAddress = CVPixelBufferGetBaseAddress(self)?.advanced(
-        by: originY * inputImageRowBytes + originX * imageChannels) else {
+        by: getY * CVPixelBufferGetBytesPerRow(self) + getX * 4) else {
       return nil
     }
 
-    // Gets vImage Buffer from input image
-    var inputVImageBuffer = vImage_Buffer(
-        data: inputBaseAddress, height: UInt(thumbnailSize), width: UInt(thumbnailSize),
-        rowBytes: inputImageRowBytes)
+    var inputVImageBuffer = vImage_Buffer(data: inputBaseAddress, height: UInt(thumbnailSize), width: UInt(thumbnailSize),rowBytes: CVPixelBufferGetBytesPerRow(self))
 
-    let thumbnailRowBytes = Int(size.width) * imageChannels
+    let thumbnailRowBytes = Int(size.width) * 4
     guard  let thumbnailBytes = malloc(Int(size.height) * thumbnailRowBytes) else {
       return nil
     }
 
-    // Allocates a vImage buffer for thumbnail image.
     var thumbnailVImageBuffer = vImage_Buffer(data: thumbnailBytes, height: UInt(size.height), width: UInt(size.width), rowBytes: thumbnailRowBytes)
 
-    // Performs the scale operation on input image buffer and stores it in thumbnail image buffer.
     let scaleError = vImageScale_ARGB8888(&inputVImageBuffer, &thumbnailVImageBuffer, nil, vImage_Flags(0))
 
     CVPixelBufferUnlockBaseAddress(self, CVPixelBufferLockFlags(rawValue: 0))
@@ -77,9 +59,8 @@ extension CVPixelBuffer {
 
     var thumbnailPixelBuffer: CVPixelBuffer?
 
-    // Converts the thumbnail vImage buffer to CVPixelBuffer
     let conversionStatus = CVPixelBufferCreateWithBytes(
-        nil, Int(size.width), Int(size.height), pixelBufferType, thumbnailBytes,
+        nil, Int(size.width), Int(size.height), CVPixelBufferGetPixelFormatType(self), thumbnailBytes,
         thumbnailRowBytes, releaseCallBack, nil, nil, &thumbnailPixelBuffer)
 
     guard conversionStatus == kCVReturnSuccess else {
@@ -98,12 +79,7 @@ extension CVPixelBuffer {
     ] as CFDictionary
 
     var pixelBuffer: CVPixelBuffer?
-    let status = CVPixelBufferCreate(kCFAllocatorDefault,
-                                     Int(image.size.width),
-                                     Int(image.size.height),
-                                     kCVPixelFormatType_32BGRA,
-                                     attrs,
-                                     &pixelBuffer)
+    let status = CVPixelBufferCreate(kCFAllocatorDefault,Int(image.size.width),Int(image.size.height),kCVPixelFormatType_32BGRA,attrs,&pixelBuffer)
 
     guard let buffer = pixelBuffer, status == kCVReturnSuccess else {
       return nil
@@ -114,13 +90,7 @@ extension CVPixelBuffer {
     let pixelData = CVPixelBufferGetBaseAddress(buffer)
 
     let rgbColorSpace = CGColorSpaceCreateDeviceRGB()
-    guard let context = CGContext(data: pixelData,
-                                  width: Int(image.size.width),
-                                  height: Int(image.size.height),
-                                  bitsPerComponent: 8,
-                                  bytesPerRow: CVPixelBufferGetBytesPerRow(buffer),
-                                  space: rgbColorSpace,
-                                  bitmapInfo: CGImageAlphaInfo.noneSkipLast.rawValue) else {
+    guard let context = CGContext(data: pixelData,width: Int(image.size.width),height: Int(image.size.height),bitsPerComponent: 8,bytesPerRow: CVPixelBufferGetBytesPerRow(buffer),space: rgbColorSpace,bitmapInfo: CGImageAlphaInfo.noneSkipLast.rawValue) else {
       return nil
     }
 
